@@ -16,11 +16,4 @@
 #include <list>
 #include <fstream>
 using namespace std;
-//用户自定义文件
-#include "Structure.h"
-#include "ErrorProc.h"
-#include "CommonLib.h"
-#include "State.h"
-#include "Lex.h"
-#include "Global.h"
 #endif // AFX_H

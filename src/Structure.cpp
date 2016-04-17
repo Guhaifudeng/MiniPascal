@@ -1,3 +1,4 @@
+#include "Structure.h"
 #include "Afx.h"
 LineInfo::LineInfo()
 {
@@ -10,6 +11,10 @@ LineInfo::LineInfo(int iRow,string szFileName)
 }
 
 CToken::CToken()
+{
+
+}
+CToken::~CToken()
 {
 
 }

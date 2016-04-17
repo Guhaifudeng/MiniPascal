@@ -102,3 +102,97 @@
 1460901364 source:d:\codeblock\meopascal\src\structure.cpp
 	"Afx.h"
 
+1460904329 source:h:\codeblock\compiler\minipascal\src\afx.cpp
+	"Afx.h"
+
+1460905369 h:\codeblock\compiler\minipascal\include\afx.h
+	"math.h"
+	"io.h"
+	<vector>
+	<set>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<map>
+	<string>
+	<vector>
+	<stack>
+	<iostream>
+	<list>
+	<fstream>
+
+1460904329 h:\codeblock\compiler\minipascal\include\structure.h
+	"Afx.h"
+
+1460904329 h:\codeblock\compiler\minipascal\include\errorproc.h
+	"Afx.h"
+
+1460904329 h:\codeblock\compiler\minipascal\include\commonlib.h
+	"Afx.h"
+
+1460905568 h:\codeblock\compiler\minipascal\include\state.h
+	"Afx.h"
+	"ErrorProc.h"
+
+1460905525 h:\codeblock\compiler\minipascal\include\lex.h
+	"Afx.h"
+	"State.h"
+	"Structure.h"
+	"CommonLib.h"
+	"ErrorProc.h"
+
+1460905447 h:\codeblock\compiler\minipascal\include\global.h
+	"Afx.h"
+	"Structure.h"
+	"State.h"
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\commonlib.cpp
+	"CommonLib.h"
+	"Afx.h"
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\errorproc.cpp
+	"Afx.h"
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\global.cpp
+	"Global.h"
+	"Afx.h"
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\lex.cpp
+	"Lex.h"
+	"Afx.h"
+
+1460905347 source:h:\codeblock\compiler\minipascal\main.cpp
+	"StdAfx.h"
+	"Structure.h"
+	"ErrorProc.h"
+	"CommonLib.h"
+	"State.h"
+	"Lex.h"
+	"Global.h"
+
+1460905359 h:\codeblock\compiler\minipascal\include\stdafx.h
+	"math.h"
+	"io.h"
+	<vector>
+	<set>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<map>
+	<string>
+	<vector>
+	<stack>
+	<iostream>
+	<list>
+	<fstream>
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\state.cpp
+	"State.h"
+	"Afx.h"
+
+1460904329 source:h:\codeblock\compiler\minipascal\src\stdafx.cpp
+	"Afx.h"
+
+1460904679 source:h:\codeblock\compiler\minipascal\src\structure.cpp
+	"Afx.h"
+

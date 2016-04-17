@@ -1,6 +1,7 @@
 #ifndef CSTATE_H
 #define CSTATE_H
 #include "Afx.h"
+#include "ErrorProc.h"
 using namespace std;
 class CState
 {

@@ -1,6 +1,14 @@
 #include "StdAfx.h"
-using namespace std;
+//用户自定义文件
+#include "Structure.h"
+#include "ErrorProc.h"
+#include "CommonLib.h"
+#include "State.h"
+#include "Lex.h"
+#include "Global.h"
 
+using namespace std;
+extern CState State;                           //文件位置信息
 /*
 void Init()
 {
