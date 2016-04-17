@@ -1,0 +1,50 @@
+# depslib dependency file v1.0
+1460877661 source:d:\codeblock\meopascal\main.cpp
+	"StdAfx.h"
+
+1460876502 d:\codeblock\meopascal\include\state.h
+	<string>
+
+1460877384 d:\codeblock\meopascal\include\stdafx.h
+	"math.h"
+	"io.h"
+	<vector>
+	<set>
+	<algorithm>
+	<stdio.h>
+	<map>
+	<string>
+	<vector>
+	<stack>
+	<iostream>
+	<list>
+	<fstream>
+	"ErrorProc.h"
+	"State.h"
+	"Global.h"
+
+1460877636 source:d:\codeblock\meopascal\src\errorproc.cpp
+	"ErrorProc.h"
+	"StdAfx.h"
+
+1460877557 d:\codeblock\meopascal\include\errorproc.h
+	"StdAfx.h"
+
+1460877679 source:d:\codeblock\meopascal\src\global.cpp
+	"Global.h"
+	"StdAfx.h"
+
+1460877737 d:\codeblock\meopascal\include\global.h
+	"StdAfx.h"
+
+1460872113 d:\codeblock\meopascal\include\cerrorproc.h
+
+1460877644 source:d:\codeblock\meopascal\src\state.cpp
+	"State.h"
+	"StdAfx.h"
+
+1460871879 source:d:\codeblock\meopascal\src\stdafx.cpp
+	"StdAfx.h"
+
+1460877021 d:\codeblock\meopascal\include\global2.h
+
