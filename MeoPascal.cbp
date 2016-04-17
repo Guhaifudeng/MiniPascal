@@ -35,22 +35,27 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="include/Afx.h" />
 		<Unit filename="include/CommonLib.h" />
 		<Unit filename="include/ErrorProc.h" />
 		<Unit filename="include/Global.h" />
 		<Unit filename="include/Lex.h" />
+		<Unit filename="include/SSttt.h" />
+		<Unit filename="include/Sleep.h" />
 		<Unit filename="include/State.h" />
 		<Unit filename="include/StdAfx.h" />
 		<Unit filename="include/Structure.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="src/Afx.cpp" />
 		<Unit filename="src/CommonLib.cpp" />
 		<Unit filename="src/ErrorProc.cpp" />
 		<Unit filename="src/Global.cpp" />
 		<Unit filename="src/Lex.cpp" />
+		<Unit filename="src/SSttt.cpp" />
+		<Unit filename="src/Sleep.cpp" />
 		<Unit filename="src/State.cpp" />
 		<Unit filename="src/StdAfx.cpp" />
 		<Unit filename="src/Structure.cpp" />
-		<Unit filename="version.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />

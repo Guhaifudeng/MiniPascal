@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "Afx.h"
 
 void EmitError (string szErr)
 {

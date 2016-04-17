@@ -1,6 +1,6 @@
-#include "State.h"
 #include "StdAfx.h"
 using namespace std;
+
 /*
 void Init()
 {

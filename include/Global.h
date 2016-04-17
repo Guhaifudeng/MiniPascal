@@ -1,6 +1,6 @@
 #ifndef GLOBAL_H
 #define GLOBAL_H
-#include "StdAfx.h"
+#include "Afx.h"
 using namespace std;
 extern vector<ErrorInfo> ErrorProcess;         //错误信息表
 extern CState State;                           //文件位置信息

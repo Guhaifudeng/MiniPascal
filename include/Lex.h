@@ -1,6 +1,6 @@
 #ifndef CLEX_H
 #define CLEX_H
-#include "StdAfx.h"
+#include "Afx.h"
 using namespace std;
 class CLex
 {

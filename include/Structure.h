@@ -1,6 +1,6 @@
 #ifndef STRUCTURE_H
 #define STRUCTURE_H
-#include "StdAfx.h"
+#include "Afx.h"
 using namespace std;
 struct LineInfo
 {

@@ -1,6 +1,6 @@
 #ifndef COMMONLIB_H
 #define COMMONLIB_H
-#include "StdAfx.h"
+#include "Afx.h"
 using namespace std;
 /*
 	¹«¹²º¯Êý¿â

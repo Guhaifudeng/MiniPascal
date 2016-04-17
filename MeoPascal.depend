@@ -1,0 +1,104 @@
+# depslib dependency file v1.0
+1460901886 source:d:\codeblock\meopascal\main.cpp
+	"StdAfx.h"
+
+1460901364 d:\codeblock\meopascal\include\stdafx.h
+	"math.h"
+	"io.h"
+	<vector>
+	<set>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<map>
+	<string>
+	<vector>
+	<stack>
+	<iostream>
+	<list>
+	<fstream>
+	"Structure.h"
+	"ErrorProc.h"
+	"CommonLib.h"
+	"State.h"
+	"Lex.h"
+	"Global.h"
+
+1460901817 d:\codeblock\meopascal\include\structure.h
+	"Afx.h"
+
+1460901364 d:\codeblock\meopascal\include\errorproc.h
+	"Afx.h"
+
+1460901364 d:\codeblock\meopascal\include\commonlib.h
+	"Afx.h"
+
+1460901364 d:\codeblock\meopascal\include\state.h
+	"Afx.h"
+
+1460901364 d:\codeblock\meopascal\include\lex.h
+	"Afx.h"
+
+1460901946 d:\codeblock\meopascal\include\global.h
+	"Afx.h"
+
+1460901364 source:d:\codeblock\meopascal\src\commonlib.cpp
+	"CommonLib.h"
+	"Afx.h"
+
+1460901364 source:d:\codeblock\meopascal\src\errorproc.cpp
+	"Afx.h"
+
+1460901364 source:d:\codeblock\meopascal\src\global.cpp
+	"Global.h"
+	"Afx.h"
+
+1460901364 source:d:\codeblock\meopascal\src\lex.cpp
+	"Lex.h"
+	"Afx.h"
+
+1460901420 d:\codeblock\meopascal\include\afx.h
+	"math.h"
+	"io.h"
+	<vector>
+	<set>
+	<algorithm>
+	<stdio.h>
+	<stdlib.h>
+	<map>
+	<string>
+	<vector>
+	<stack>
+	<iostream>
+	<list>
+	<fstream>
+	"Structure.h"
+	"ErrorProc.h"
+	"CommonLib.h"
+	"State.h"
+	"Lex.h"
+	"Global.h"
+
+1460901431 source:d:\codeblock\meopascal\src\afx.cpp
+	"Afx.h"
+
+1460901654 source:d:\codeblock\meopascal\src\sleep.cpp
+	"Sleep.h"
+
+1460901653 d:\codeblock\meopascal\include\sleep.h
+
+1460901681 source:d:\codeblock\meopascal\src\ssttt.cpp
+	"SSttt.h"
+
+1460901681 d:\codeblock\meopascal\include\ssttt.h
+
+1460901364 source:d:\codeblock\meopascal\src\state.cpp
+	"State.h"
+	"Afx.h"
+
+1460901305 source:d:\codeblock\meopascal\src\stdafx.cpp
+	"Afx.h"
+
+1460901364 source:d:\codeblock\meopascal\src\structure.cpp
+	"Afx.h"
+

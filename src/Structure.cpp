@@ -1,4 +1,4 @@
-#include "StdAfx.h"
+#include "Afx.h"
 LineInfo::LineInfo()
 {
 

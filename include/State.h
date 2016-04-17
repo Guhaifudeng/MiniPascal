@@ -1,6 +1,6 @@
 #ifndef CSTATE_H
 #define CSTATE_H
-#include "StdAfx.h"
+#include "Afx.h"
 using namespace std;
 class CState
 {

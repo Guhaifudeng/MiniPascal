@@ -1,5 +1,5 @@
 #include "CommonLib.h"
-#include "StdAfx.h"
+#include "Afx.h"
 
 void SetTbl(string szSource,map<string,int> &szTbl)
 {
