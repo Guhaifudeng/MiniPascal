@@ -6,22 +6,15 @@ using namespace std;
 	公共函数库
 */
 
-
-/*读取指定文件名的文本文件函数
-  参数: pFileName	文件名
-  返回: iStart		以字符串形式返回文本文件内容
-*/
+/********************词法分析***********************************/
+string FileRead(string szFileName);
 void SetTbl(string szSource,vector<string> &szTbl,int iStart=0);
 void SetTbl(string szSource,map<string,int> &szTbl);
-string FileRead(string szFileName);
 
-string trim(string str);
-string itos(int i);
-string StrErase(string str,char c);
-
+string trim(string str);//删去单词里解析出来的不必要的字符
+string itos(int i);//将数字用字符表示
+string UpperCase(string str);//字符大小写
+/********************语法分析***********************************/
+string StrErase(string str,char c);//从字符串中剔除字符
 string StrReplace(string str,string src,string des);
-
-string UpperCase(string str);
-
-
 #endif // COMMONLIB_H

@@ -1,5 +1,6 @@
 #include "Structure.h"
 #include "Afx.h"
+/********************词法分析***********************************/
 LineInfo::LineInfo()
 {
 
@@ -26,3 +27,4 @@ CToken::CToken(int iKind,string szContent,int iRow,string szFileName)
     m_LineInfo=LineInfo(iRow,szFileName);
     //m_iRow=iRow;
 }
+/********************语法分析***********************************/

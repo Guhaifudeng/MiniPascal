@@ -2,6 +2,7 @@
 #define STRUCTURE_H
 #include "Afx.h"
 using namespace std;
+/********************词法分析***********************************/
 struct LineInfo
 {
     int m_iRow;
@@ -25,5 +26,5 @@ struct ErrorInfo
     string m_szFileName;
     int m_iRow;
 };
-
+/********************语法分析***********************************/
 #endif // STRUCTURE_H
