@@ -1,8 +1,14 @@
 # depslib dependency file v1.0
-1460901886 source:d:\codeblock\meopascal\main.cpp
+1460945640 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
+	"Structure.h"
+	"ErrorProc.h"
+	"CommonLib.h"
+	"State.h"
+	"Lex.h"
+	"Global.h"
 
-1460901364 d:\codeblock\meopascal\include\stdafx.h
+1460941170 d:\codeblock\meopascal\include\stdafx.h
 	"math.h"
 	"io.h"
 	<vector>
@@ -17,47 +23,52 @@
 	<iostream>
 	<list>
 	<fstream>
+
+1461506107 d:\codeblock\meopascal\include\structure.h
+	"Afx.h"
+
+1460945557 d:\codeblock\meopascal\include\errorproc.h
+	"Afx.h"
 	"Structure.h"
+
+1461504537 d:\codeblock\meopascal\include\commonlib.h
+	"Afx.h"
+
+1460941170 d:\codeblock\meopascal\include\state.h
+	"Afx.h"
 	"ErrorProc.h"
+
+1460944607 d:\codeblock\meopascal\include\lex.h
+	"Afx.h"
+	"State.h"
+	"Structure.h"
 	"CommonLib.h"
+	"ErrorProc.h"
+
+1460944807 d:\codeblock\meopascal\include\global.h
+	"Afx.h"
+	"Structure.h"
 	"State.h"
 	"Lex.h"
-	"Global.h"
+	"Syntax.h"
 
-1460901817 d:\codeblock\meopascal\include\structure.h
-	"Afx.h"
-
-1460901364 d:\codeblock\meopascal\include\errorproc.h
-	"Afx.h"
-
-1460901364 d:\codeblock\meopascal\include\commonlib.h
-	"Afx.h"
-
-1460901364 d:\codeblock\meopascal\include\state.h
-	"Afx.h"
-
-1460901364 d:\codeblock\meopascal\include\lex.h
-	"Afx.h"
-
-1460901946 d:\codeblock\meopascal\include\global.h
-	"Afx.h"
-
-1460901364 source:d:\codeblock\meopascal\src\commonlib.cpp
+1461505709 source:d:\codeblock\meopascal\src\commonlib.cpp
 	"CommonLib.h"
 	"Afx.h"
 
-1460901364 source:d:\codeblock\meopascal\src\errorproc.cpp
+1460945555 source:d:\codeblock\meopascal\src\errorproc.cpp
 	"Afx.h"
+	"ErrorProc.h"
 
-1460901364 source:d:\codeblock\meopascal\src\global.cpp
+1461495466 source:d:\codeblock\meopascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 
-1460901364 source:d:\codeblock\meopascal\src\lex.cpp
+1461505337 source:d:\codeblock\meopascal\src\lex.cpp
 	"Lex.h"
 	"Afx.h"
 
-1460901420 d:\codeblock\meopascal\include\afx.h
+1461505429 d:\codeblock\meopascal\include\afx.h
 	"math.h"
 	"io.h"
 	<vector>
@@ -72,12 +83,6 @@
 	<iostream>
 	<list>
 	<fstream>
-	"Structure.h"
-	"ErrorProc.h"
-	"CommonLib.h"
-	"State.h"
-	"Lex.h"
-	"Global.h"
 
 1460901431 source:d:\codeblock\meopascal\src\afx.cpp
 	"Afx.h"
@@ -92,14 +97,15 @@
 
 1460901681 d:\codeblock\meopascal\include\ssttt.h
 
-1460901364 source:d:\codeblock\meopascal\src\state.cpp
+1460942150 source:d:\codeblock\meopascal\src\state.cpp
 	"State.h"
 	"Afx.h"
 
 1460901305 source:d:\codeblock\meopascal\src\stdafx.cpp
 	"Afx.h"
 
-1460901364 source:d:\codeblock\meopascal\src\structure.cpp
+1461504720 source:d:\codeblock\meopascal\src\structure.cpp
+	"Structure.h"
 	"Afx.h"
 
 1460904329 source:h:\codeblock\compiler\minipascal\src\afx.cpp
@@ -195,4 +201,18 @@
 
 1460904679 source:h:\codeblock\compiler\minipascal\src\structure.cpp
 	"Afx.h"
+
+1460946148 d:\codeblock\meopascal\include\syntax.h
+	"Afx.h"
+	"Structure.h"
+	"ErrorProc.h"
+	"CommonLib.h"
+
+1460965587 source:d:\codeblock\meopascal\src\syntax.cpp
+	"Syntax.h"
+	"Afx.h"
+	"State.h"
+	<iostream>
+
+1461503318 source:d:\codeblock\meopascal\src\symboltbl.cpp
 

@@ -6,11 +6,9 @@
 #include "CommonLib.h"
 #include "ErrorProc.h"
 using namespace std;
-
 class CLex
 {
 private:
-    CState state;
     int m_szLexTbl[50][130];					//词法分析表
     string m_szSource;							//源代码字符串
     map<string,int> m_KeywordTbl;				//保留字表

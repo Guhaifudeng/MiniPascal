@@ -8,14 +8,13 @@
 #include "Global.h"
 
 using namespace std;
-extern CState State;                           //文件位置信息
-/*
+
 void Init()
 {
 	Lex.LexInit();
 	Lex.SetFileName(State.m_szSourceFile);
 }
-*/                      //文件位置
+
 int main(int argc, char** argv)
 {
     //处理命令行参数
@@ -26,15 +25,15 @@ int main(int argc, char** argv)
     }
 
     //系统初始化
-    //Init();
+    Init();
 
     //词法分析
     //extern CLex Lex;
-    /*	if (!Lex.GenToken(&TokenList))
-    	{
+    if (!Lex.GenToken(&TokenList))
+    {
     		PrintError();
     		return 1;
-    	}
-    */
+    }
+
 
 }

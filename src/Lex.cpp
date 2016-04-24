@@ -1,6 +1,7 @@
 #include "Lex.h"
 #include "Afx.h"
 extern CState State;
+
 CLex::CLex()
 {
 }

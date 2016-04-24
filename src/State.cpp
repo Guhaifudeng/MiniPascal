@@ -144,4 +144,3 @@ bool CState::CommandInit(int argc, char** argv)
 
     return true;
 }
-CState State;                           //文件位置信息
