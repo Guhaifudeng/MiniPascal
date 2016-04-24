@@ -136,7 +136,22 @@ string itos(int i)
     itoa(i,cBuffer,10);
     return cBuffer;
 }
-
+string rtos(double i)
+{
+	char* cBuffer;
+	int iPos,iSign;
+	cBuffer=ecvt(i,10,&iPos,&iSign);
+	string szTmp=cBuffer;
+	if (iPos>0)
+	{
+		szTmp.insert(szTmp.begin()+iPos,1,'.');
+	}
+	if (iSign==1)
+	{
+		szTmp='-'+szTmp;
+	}
+	return szTmp;
+}
 string UpperCase(string str)
 {
     string szTmp=str;
@@ -170,7 +185,7 @@ string StrErase(string str,char c)//剔除某字符
 
 
 /*********************语义分析*************************************/
-extern Opti_Tbl opti_tbl[OPTI_TBL_NUM];
+//extern Opti_Tbl opti_tbl[OPTI_TBL_NUM];
 
 extern CSymbolTbl SymbolTbl;
 
@@ -207,134 +222,10 @@ map<int,int> GetId2VarMap(int iProcIndex,bool flag)
 	return Tmp;
 }
 
-void SetTbl(string szSource,map<string,int> &szTbl)
-{
-	string szTmp="";
-	int cnt=0;
-	for(int i=0;i<szSource.length();i++)
-	{
-		if (szSource[i]!='\n')
-		{
-			szTmp.append(1,szSource[i]);
-		}
-		else
-		{
-			if (szTmp.compare("")!=0)
-			{
-				szTbl.insert(pair<string,int>(szTmp,cnt));
-				szTmp="";
-				cnt++;
-			}
-		}
-	}
-	if (szTmp.compare("")!=0)
-		szTbl.insert(pair<string,int>(szTmp,cnt));
-}
 
-void SetTbl(string szSource,vector<string> &szTbl,int iStart)
-{
-	string szTmp="";
-	int cnt=iStart;
 
-	for (int i=0;i<cnt;i++)
-	{
-		szTbl.push_back("");
-	}
 
-	for(int i=0;i<szSource.length();i++)
-	{
-		if (szSource[i]!='\n')
-		{
-			szTmp.append(1,szSource[i]);
-		}
-		else
-		{
-			if (szTmp.compare("")!=0)
-			{
-				szTbl.push_back(szTmp);
-				szTmp="";
-				cnt++;
-			}
-		}
-	}
-
-	if (szTmp.compare("")!=0)
-	{
-		szTbl[cnt]=szTmp;
-	}
-
-}
-
-string FileRead(string szFileName)
-{
-	string szFileContent="";
-	FILE* fp=fopen(szFileName.c_str(),"rt");
-
-	if (fp==NULL)
-	{
-		return "";
-	}
-
-	int i=1;
-	char Buffer[1];
-
-	while (i==1)
-	{
-		i=fread(Buffer,1,1,fp);
-
-		if (i==1)
-		{
-			szFileContent.push_back((char)Buffer[0]);
-		}
-	}
-
-	fclose(fp);
-	return szFileContent;
-}
-
-string ltrim(string str)
-{
-	if (str.empty())
-	{
-		return str;
-	}
-
-	string szTmp="";
-	int i;
-
-	for (i=0;str[i]<=32&&i<str.length();i++);
-
-	for (;i<str.length();i++)
-	{
-		szTmp.append(1,str[i]);
-	}
-
-	return szTmp;
-}
-
-string rtrim(string str)
-{
-	if (str.empty())
-	{
-		return str;
-	}
-
-	string szTmp="";
-	int i;
-	for (i=str.length();str[i]<=32&&i>=0;i--);
-
-	for(int j=0;j<=i;j++)
-	{
-		szTmp.append(1,str[j]);
-	}
-
-	return szTmp;
-}
-string trim(string str)
-{
-	return rtrim(ltrim(str));
-}
-string VectorStr(vector<string> vec)
+string VectorStr(vector<string> vec)//将字符串集合-->字符串
 {
 	string tmp="";
 
@@ -346,35 +237,9 @@ string VectorStr(vector<string> vec)
 	return trim(tmp);
 }
 
-string UpperCase(string str)
-{
-	string szTmp=str;
 
-	for (int i=0;i<szTmp.length();i++)
-	{
-		if (szTmp[i]>='a' && szTmp[i]<='z')
-		{
-			szTmp[i]=szTmp[i]-('a'-'A');
-		}
-	}
-	return szTmp;
-}
-string StrErase(string str,char c)
-{
-	string szTmp="";
-	int i;
 
-	for (i=0;i<str.length();++i)
-	{
-		if (str[i]!=c)
-		{
-			szTmp.append(1,str[i]);
-		}
-	}
-
-	return  szTmp;
-}
-string GenSetStr(int iNum,string ch)
+string GenSetStr(int iNum,string ch)//集合-->字符串
 {
 	int i;
 	string szTmp;
@@ -387,7 +252,7 @@ string GenSetStr(int iNum,string ch)
 	return szTmp;
 }
 
-string SetAdd(string szSet1,string szSet2)
+string SetAdd(string szSet1,string szSet2)//集合并
 {
 	string szTmp;
 
@@ -398,7 +263,7 @@ string SetAdd(string szSet1,string szSet2)
 	return szTmp;
 }
 
-string SetMul(string szSet1,string szSet2)
+string SetMul(string szSet1,string szSet2)//集合交
 {
 	string szTmp;
 
@@ -409,7 +274,7 @@ string SetMul(string szSet1,string szSet2)
 	return szTmp;
 }
 
-string SetDel(string szSet1,string szSet2)
+string SetDel(string szSet1,string szSet2)//集合差
 {
 	string szTmp=GenSetStr(256,"0");
 
@@ -427,7 +292,7 @@ string SetDel(string szSet1,string szSet2)
 	return szTmp;
 }
 
-string SetAddItem(string szSet,int i)
+string SetAddItem(string szSet,int i)//集合中添加信息
 {
 	if (i>=szSet.length())
 	{
@@ -460,60 +325,39 @@ static int VarId;
 
 static int LabelId;
 
-void ClsVarId()
+void ClsVarId()//初始化临时变量序号
 {
 	VarId=0;
 }
 
-string GetVarId()
+string GetVarId()//临时变量序号
 {
 	return itos(VarId++);
 }
 
-void ClsLabelId()
+void ClsLabelId()//初始化内部标号
 {
 	LabelId=0;
 }
 
-string GetLabelId()
+string GetLabelId()//内部标号
 {
 	return itos(LabelId++);
 }
 
 
-void ClrSerialId()
+void ClrSerialId()//初始化序列号
 {
 	SerialId=0;
 }
-string GetSerialId()
+string GetSerialId()//全局序列号
 {
 	return itos(SerialId++);
 }
 
-string itos(int i)
-{
-	char cBuffer[10];
-	int iPos,iSign;
-	itoa(i,cBuffer,10);
-	return cBuffer;
-}
 
-string rtos(double i)
-{
-	char* cBuffer;
-	int iPos,iSign;
-	cBuffer=ecvt(i,10,&iPos,&iSign);
-	string szTmp=cBuffer;
-	if (iPos>0)
-	{
-		szTmp.insert(szTmp.begin()+iPos,1,'.');
-	}
-	if (iSign==1)
-	{
-		szTmp='-'+szTmp;
-	}
-	return szTmp;
-}
+
+
 
 IRCode EmitIR(OpType eOpType,OpInfo Op1,OpInfo Op2,OpInfo Rslt)
 {
@@ -545,7 +389,7 @@ IRCode EmitIR(OpType eOpType,OpInfo Op1)
 	return Tmp;
 }
 
-string GetIRStr(IRCode tmp)
+string GetIRStr(IRCode tmp)//IR->String(null,null,null,null)
 {
 	string s="("+GetOpStr(tmp.m_eOpType)+"              ";
 	s=s.substr(0,15)+",";
@@ -558,7 +402,7 @@ string GetIRStr(IRCode tmp)
 	replace(s.begin(),s.end(),'\n',';');
 	return s;
 }
-string GetOp(OpInfo Op)
+string GetOp(OpInfo Op)//得到操作数
 {
 	if (Op.m_iType==OpInfo::NONE)
 	{
@@ -566,7 +410,7 @@ string GetOp(OpInfo Op)
 	}
 	if (Op.m_iType==OpInfo::CONST)
 	{
-		if (SymbolTbl.ConstInfoTbl[Op.m_iLink].m_ConstType==ConstType::SET)
+		if (SymbolTbl.ConstInfoTbl[Op.m_iLink].m_ConstType==ConstType::SET)//ConstType
 			return SetValue(SymbolTbl.ConstInfoTbl[Op.m_iLink].m_szName);
 		else
 			return SymbolTbl.ConstInfoTbl[Op.m_iLink].m_szName.c_str();
@@ -607,7 +451,7 @@ string SetValue(string szSetValue)
 	string szHex;
 	string szTmp;
 	char c;
-
+    //交换
 	for (int i=0;i<szSetValue.length()/2;i++)
 	{
 		c=szSetValue[i];
@@ -615,7 +459,7 @@ string SetValue(string szSetValue)
 		szSetValue[szSetValue.length()-i-1]=c;
 	}
 
-
+    //16个十六进制数-8字节
 	for (int i=0;i<=256;i++)
 	{
 		if (i!=256)
@@ -659,7 +503,7 @@ string SetValue(string szSetValue)
 	return szTmp;
 }
 
-string GetOpStr(int i)
+string GetOpStr(int i)//根据操作符类型得到 操作符
 {
 	switch(i)
 	{
@@ -887,13 +731,13 @@ string GetOpStr(int i)
 
 
 
-int GetVarLink(string szTmp)
+int GetVarLink(string szTmp)//得到$+1 到末尾字符
 {
 
 
 	return atoi(szTmp.substr(szTmp.find('$')+1,szTmp.length()).c_str());
 }
-
+/*
 string AsmtoStr(AsmCode p)
 {
 	string szTmp="";
@@ -921,3 +765,4 @@ AsmCode InsertContent(string szContent)
 	tmp.Content=szContent;
 	return tmp;
 }
+*/

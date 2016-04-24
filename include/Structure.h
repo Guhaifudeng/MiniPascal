@@ -40,9 +40,11 @@ struct LabelInfo:ObjectInfo//标号信息表项
 	bool m_bDef;
 	bool m_bUse;
 };
-enum ConstType{STRING,REAL,INTEGER,EREAL,BOOLEAN,ENUM,SET,PTR};//常量基本类型-语法
-
-enum StoreType{			T_NONE=0,//实际数据类型
+struct ConstType{
+    enum CConstType{STRING,REAL,INTEGER,EREAL,BOOLEAN,ENUM,SET,PTR};//常量基本类型-语法
+};
+struct StoreType {
+    enum CStoreType{			T_NONE=0,//实际数据类型
 						T_CHAR=1,
 						T_BOOLEAN=2,
 						T_INTEGER=3,
@@ -66,11 +68,12 @@ enum StoreType{			T_NONE=0,//实际数据类型
 						T_PROC=21,
 						T_USER=22
 };
+};
 struct ConstInfo:ObjectInfo//常量信息表项
 {
 	string m_szVal;
-	ConstType m_ConstType;//当前数据类型
-	StoreType m_StoreType;
+	ConstType::CConstType m_ConstType;//当前数据类型
+	StoreType::CStoreType m_StoreType;
 	long long m_iVal;
 	bool m_bVal;
 	double m_fVal;
@@ -79,10 +82,11 @@ struct ConstInfo:ObjectInfo//常量信息表项
 	bool m_bUsed;
 	ConstInfo();
 };
+
 struct VarInfo:ObjectInfo//变量信息表项
 {
 	int m_iTypeLink;
-	enum Rank {PARA,VAR,RET} m_eRank;
+	enum Rank {PARA,VAR,RET} m_eRank;//普通变量、形参变量、返回值
 	bool m_bRef;
 	int m_iMemoryAlloc;
 	string m_szReg;
@@ -109,11 +113,11 @@ struct FieldInfo:ObjectInfo//记录类型字段域
 };
 struct TypeInfo:ObjectInfo//类型信息表项
 {
-	StoreType m_eDataType;				//数据类型
+	StoreType::CStoreType m_eDataType;				//数据类型
 	int m_iLink;						//复杂类型指针
 	vector<FieldInfo> m_FieldInfo;		//记录类型字段域
 	vector<ArrayInfo> m_ArrayInfo;		//数组类型的维度域
-	StoreType m_eBaseType;				//基本类型
+	StoreType::CStoreType m_eBaseType;				//基本类型
 	string m_szContent;					//备注
 	int m_iState;						//处理状态-该类型是否构造完毕
 	int m_iSize;
@@ -140,7 +144,7 @@ struct ParaInfo
 /********************中间表示***********************************/
 struct VarType
 {
-	StoreType m_StoreType;
+	StoreType::CStoreType m_StoreType;
 	int m_iLink;
 	VarType(StoreType StoreType,int iLink);
 	VarType();
@@ -156,6 +160,7 @@ struct OpInfo//操作数
 	bool m_bUninit;
 	OpInfo();
 };
+
 enum OpType//操作符-操作类型
 {
 

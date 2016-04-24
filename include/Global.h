@@ -11,6 +11,6 @@ extern CState State;
 extern CLex Lex;
 extern CSyntax Syntax;
 extern vector<CToken> TokenList;			   //Êä³öµ¥´ÊÁ÷
-
+typedef bool (*SemanticFunc)();
 
 #endif // GLOBAL_H

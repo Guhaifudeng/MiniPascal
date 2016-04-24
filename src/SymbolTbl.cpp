@@ -1,7 +1,7 @@
-/*#include "SymbolTbl.h"
+#include "SymbolTbl.h"
 
-extern map<int,vector<CBasicBlock>> BasicBlock;
-
+//extern map<int,vector<CBasicBlock>> BasicBlock;
+extern CSymbolTbl SymbolTbl;
 CSymbolTbl::CSymbolTbl(void)
 {
 }
@@ -10,7 +10,7 @@ CSymbolTbl::~CSymbolTbl(void)
 {
 }
 
-int CSymbolTbl::GetTmpVar(int iProcIndex,StoreType eStoreType)
+int CSymbolTbl::GetTmpVar(int iProcIndex,StoreType::CStoreType eStoreType)
 {
 	VarInfo Tmp;
 	Tmp.m_iProcIndex=iProcIndex;
@@ -30,7 +30,7 @@ int CSymbolTbl::GetTmpVar(int iProcIndex,StoreType eStoreType)
 
 int CSymbolTbl::GetTmpVar(int iProcIndex,OpType eOpType)
 {
-	StoreType Tmp;
+	StoreType::CStoreType Tmp;
 	switch((int)eOpType)
 	{
 	case -1:
@@ -91,7 +91,7 @@ int CSymbolTbl::GetTmpLabel(int iProcIndex)
 	AddLabel(Tmp);
 	return LabelInfoTbl.size()-1;
 }
-
+/*
 int CSymbolTbl::RecConstTbl(const ConstInfo Value)
 {
 	SymbolTbl.AddConst(Value);
@@ -138,7 +138,7 @@ int CSymbolTbl::RecConstTbl(const string szValue,int iType)
 	CType::ProcessConstType(SymbolTbl.ConstInfoTbl.size()-1);
 	return SymbolTbl.ConstInfoTbl.size()-1;
 }
-
+*/
 int CSymbolTbl::SearchLabelInfoTbl(int iProcIndex,string szName)
 {
 	int i=LabelInfoTbl.size()-1;
@@ -212,6 +212,27 @@ int CSymbolTbl::SearchProcInfoTbl(string szName,bool bIsForward)
 
 	return i;
 }
+
+void CSymbolTbl::AddLabel(LabelInfo Tmp)
+{
+	SymbolTbl.LabelInfoTbl.insert(pair<int,LabelInfo>(SymbolTbl.LabelInfoTbl.size(),Tmp));
+}
+
+void CSymbolTbl::AddConst(ConstInfo Tmp)
+{
+	SymbolTbl.ConstInfoTbl.insert(pair<int,ConstInfo>(SymbolTbl.ConstInfoTbl.size(),Tmp));
+}
+
+void CSymbolTbl::AddType(TypeInfo Tmp)
+{
+	SymbolTbl.TypeInfoTbl.insert(pair<int,TypeInfo>(SymbolTbl.TypeInfoTbl.size(),Tmp));
+}
+
+void CSymbolTbl::AddVar(VarInfo Tmp)
+{
+	SymbolTbl.VarInfoTbl.insert(pair<int,VarInfo>(SymbolTbl.VarInfoTbl.size(),Tmp));
+}
+
 void CSymbolTbl::Clear()
 {
 	ProcInfoTbl.clear();
@@ -226,7 +247,7 @@ void CSymbolTbl::Clear()
 		ProcStack.pop();
 	}
 }
-
+/*
 bool CSymbolTbl::ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List2)
 {
 	if (List1.size()!=List2.size())
@@ -239,7 +260,7 @@ bool CSymbolTbl::ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List
 
 		for(i=0;i<List1.size();i++)
 		{
-			if (List1.at(i).m_iKind!=List2.at(i).m_iKind
+			if (List1.at(i).m_iKind!=List2.at(i).m_iKind//先比较ID，ID相同的情况下比较名字
 				|| List1.at(i).m_szContent.compare(List2.at(i).m_szContent)!=0)
 			{
 				return false;
@@ -465,7 +486,7 @@ bool CSymbolTbl::IsVarPara(string szName,int iProcIndex)
 	}
 	return false;
 }
-
+*/
 int CSymbolTbl::SearchTypeSysTbl(int iOp,int iOp1Type,int iOp2Type)
 {
 	int i=TypeSysTbl.size()-1;
@@ -480,7 +501,7 @@ int CSymbolTbl::SearchTypeSysTbl(int iOp,int iOp1Type,int iOp2Type)
 	return i;
 
 }
-
+/*
 void CSymbolTbl::PrintIR()
 {
 	for(int i=0;i<SymbolTbl.ProcInfoTbl.size();i++)
@@ -564,22 +585,4 @@ bool CSymbolTbl::IsTmpVar(int iPos)
 	}
 }
 
-void CSymbolTbl::AddLabel(LabelInfo Tmp)
-{
-	SymbolTbl.LabelInfoTbl.insert(pair<int,LabelInfo>(SymbolTbl.LabelInfoTbl.size(),Tmp));
-}
-
-void CSymbolTbl::AddConst(ConstInfo Tmp)
-{
-	SymbolTbl.ConstInfoTbl.insert(pair<int,ConstInfo>(SymbolTbl.ConstInfoTbl.size(),Tmp));
-}
-
-void CSymbolTbl::AddType(TypeInfo Tmp)
-{
-	SymbolTbl.TypeInfoTbl.insert(pair<int,TypeInfo>(SymbolTbl.TypeInfoTbl.size(),Tmp));
-}
-
-void CSymbolTbl::AddVar(VarInfo Tmp)
-{
-	SymbolTbl.VarInfoTbl.insert(pair<int,VarInfo>(SymbolTbl.VarInfoTbl.size(),Tmp));
-}*/
+*/

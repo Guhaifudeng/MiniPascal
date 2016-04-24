@@ -18,4 +18,6 @@
 using namespace std;
 //用户自定义文件
 
+#define OPTI_TBL_NUM 79
+#define SearchOptiTbl(a) OptiMap[(a)]
 #endif // AFX_H

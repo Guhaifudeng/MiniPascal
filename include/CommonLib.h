@@ -1,6 +1,8 @@
 #ifndef COMMONLIB_H
 #define COMMONLIB_H
 #include "Afx.h"
+#include "Structure.h"
+#include "SymbolTbl.h"
 using namespace std;
 /*
 	公共函数库
@@ -15,17 +17,18 @@ string itos(int i);//将数字用字符表示
 string rtos(double i);///将实数用字符表示
 string UpperCase(string str);//字符大小写
 string StrErase(string str,char c);//从字符串中剔除字符
+string StrReplace(string str,string src,string des);//将str中字符串src替换成des
 /********************语法分析***********************************/
 
 /*********************语义分析*************************************/
 
-string StrReplace(string str,string src,string des);
-string SetAdd(string szSet1,string szSet2);
-string SetMul(string szSet1,string szSet2);
-string SetDel(string szSet1,string szSet2);
 
+string SetAdd(string szSet1,string szSet2);//集合并
+string SetMul(string szSet1,string szSet2);//集合交
+string SetDel(string szSet1,string szSet2);//集合减
+string SetAddItem(string szSet,int i);//向集合中添加元素
 string GenSetStr(int iNum,string ch);
-string SetAddItem(string szSet,int i);
+
 
 IRCode EmitIR(OpType eOpType,OpInfo Op1,OpInfo Op2,OpInfo Rslt);//生成中间代码
 IRCode EmitIR(OpType eOpType,OpInfo Op1,OpInfo Rslt);

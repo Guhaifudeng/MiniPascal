@@ -1,15 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
 <CodeBlocks_layout_file>
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="src\Global.cpp" open="0" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.cpp" open="0" top="0" tabpos="19" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="98" topLine="0" />
-=======
-	<File name="src\CommonLib.cpp" open="1" top="1" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+			<Cursor1 position="313" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="include\Syntax.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="7610" topLine="120" />
->>>>>>> fb7eb57b10c4ea414af783aa0d4ce04dcfa55922
+			<Cursor1 position="257" topLine="7" />
+		</Cursor>
+	</File>
+	<File name="src\Type.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9970" topLine="298" />
+		</Cursor>
+	</File>
+	<File name="include\SymbolTbl.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2489" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="include\Structure.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1026" topLine="36" />
+		</Cursor>
+	</File>
+	<File name="include\Type.h" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1170" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\SymbolTbl.cpp" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="177" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Structure.cpp" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1777" topLine="76" />
+		</Cursor>
+	</File>
+	<File name="src\State.cpp" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Syntax.cpp" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Lex.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Global.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1687" topLine="6" />
+		</Cursor>
+	</File>
+	<File name="src\CommonLib.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="9280" topLine="479" />
 		</Cursor>
 		<Folding>
 			<Collapse line="4" />
@@ -17,268 +71,21 @@
 			<Collapse line="10" />
 			<Collapse line="14" />
 			<Collapse line="16" />
-			<Collapse line="28" />
-			<Collapse line="33" />
-			<Collapse line="38" />
-			<Collapse line="40" />
-			<Collapse line="44" />
-			<Collapse line="46" />
-			<Collapse line="55" />
-			<Collapse line="63" />
-			<Collapse line="68" />
-			<Collapse line="76" />
-			<Collapse line="80" />
-			<Collapse line="90" />
-			<Collapse line="92" />
-			<Collapse line="102" />
-			<Collapse line="110" />
-			<Collapse line="112" />
-			<Collapse line="121" />
-			<Collapse line="128" />
-			<Collapse line="132" />
-			<Collapse line="140" />
-			<Collapse line="144" />
-			<Collapse line="146" />
-			<Collapse line="154" />
-			<Collapse line="159" />
-			<Collapse line="161" />
-			<Collapse line="177" />
-			<Collapse line="182" />
-			<Collapse line="185" />
-			<Collapse line="194" />
-			<Collapse line="199" />
-			<Collapse line="202" />
-			<Collapse line="210" />
-			<Collapse line="214" />
-			<Collapse line="216" />
-			<Collapse line="220" />
-			<Collapse line="222" />
-			<Collapse line="234" />
-			<Collapse line="239" />
-			<Collapse line="244" />
-			<Collapse line="246" />
-			<Collapse line="250" />
-			<Collapse line="252" />
-			<Collapse line="261" />
-			<Collapse line="268" />
-			<Collapse line="273" />
-			<Collapse line="281" />
-			<Collapse line="285" />
-			<Collapse line="295" />
-			<Collapse line="297" />
-			<Collapse line="307" />
-			<Collapse line="315" />
-			<Collapse line="317" />
-			<Collapse line="326" />
-			<Collapse line="333" />
-			<Collapse line="337" />
-			<Collapse line="341" />
-			<Collapse line="349" />
-			<Collapse line="353" />
-			<Collapse line="355" />
-			<Collapse line="362" />
-			<Collapse line="367" />
-			<Collapse line="369" />
-			<Collapse line="377" />
-			<Collapse line="382" />
-			<Collapse line="390" />
-			<Collapse line="394" />
-			<Collapse line="401" />
-			<Collapse line="405" />
-			<Collapse line="412" />
-			<Collapse line="416" />
-			<Collapse line="418" />
-			<Collapse line="422" />
-			<Collapse line="430" />
-			<Collapse line="432" />
-			<Collapse line="436" />
-			<Collapse line="443" />
-			<Collapse line="448" />
-			<Collapse line="463" />
-			<Collapse line="468" />
-			<Collapse line="473" />
-			<Collapse line="478" />
-			<Collapse line="484" />
-			<Collapse line="488" />
-			<Collapse line="518" />
-			<Collapse line="529" />
-			<Collapse line="539" />
-			<Collapse line="548" />
-			<Collapse line="561" />
-			<Collapse line="563" />
-			<Collapse line="567" />
-			<Collapse line="574" />
-			<Collapse line="583" />
-			<Collapse line="588" />
-			<Collapse line="595" />
-			<Collapse line="599" />
-			<Collapse line="605" />
-			<Collapse line="611" />
-			<Collapse line="619" />
-			<Collapse line="623" />
-			<Collapse line="647" />
-			<Collapse line="662" />
-			<Collapse line="664" />
 		</Folding>
 	</File>
-<<<<<<< HEAD
-	<File name="include\Global.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Global.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="96" topLine="0" />
+			<Cursor1 position="377" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\Lex.cpp" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\CommonLib.h" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="56" topLine="0" />
+			<Cursor1 position="1191" topLine="31" />
 		</Cursor>
 	</File>
-	<File name="include\Lex.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-=======
-	<File name="src\ErrorProc.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Afx.h" open="0" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="266" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="include\Structure.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1194" topLine="23" />
-		</Cursor>
-		<Folding>
-			<Collapse line="6" />
-			<Collapse line="14" />
-			<Collapse line="23" />
-		</Folding>
-	</File>
-	<File name="include\Syntax.h" open="1" top="0" tabpos="18" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="270" topLine="4" />
-		</Cursor>
-	</File>
-	<File name="src\Afx.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
->>>>>>> fb7eb57b10c4ea414af783aa0d4ce04dcfa55922
-		<Cursor>
-			<Cursor1 position="140" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="src\State.cpp" open="0" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1956" topLine="67" />
-		</Cursor>
-	</File>
-	<File name="include\State.h" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="76" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Structure.cpp" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="22" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Structure.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="497" topLine="11" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="177" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Afx.cpp" open="0" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="20" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\CommonLib.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="272" topLine="149" />
-		</Cursor>
-	</File>
-	<File name="src\ErrorProc.cpp" open="0" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="10" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Afx.h" open="0" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="357" topLine="9" />
-		</Cursor>
-	</File>
-	<File name="include\CommonLib.h" open="0" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="52" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\ErrorProc.h" open="0" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="54" topLine="0" />
-=======
-	<File name="src\Syntax.cpp" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1328" topLine="113" />
-		</Cursor>
-	</File>
-	<File name="src\State.cpp" open="1" top="0" tabpos="16" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2219" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\SymbolTbl.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3059" topLine="43" />
-		</Cursor>
-	</File>
-	<File name="include\State.h" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="495" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\SymbolTbl.cpp" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="14019" topLine="563" />
-		</Cursor>
-	</File>
-	<File name="include\Afx.h" open="1" top="0" tabpos="17" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="159" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\CommonLib.h" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1588" topLine="35" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="154" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Lex.cpp" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2278" topLine="94" />
-		</Cursor>
-	</File>
-	<File name="src\Global.cpp" open="1" top="0" tabpos="15" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="275" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Global.h" open="0" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="287" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Structure.cpp" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1070" topLine="48" />
-		</Cursor>
-	</File>
-	<File name="include\Lex.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="177" topLine="0" />
->>>>>>> fb7eb57b10c4ea414af783aa0d4ce04dcfa55922
+			<Cursor1 position="252" topLine="0" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

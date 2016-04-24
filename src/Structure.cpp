@@ -56,8 +56,8 @@ TypeInfo::TypeInfo()//¿‡–Õ
 {
 	m_iLink=-1;
 	m_szContent="";
-	m_eDataType=T_NONE;
-	m_eBaseType=T_NONE;
+	m_eDataType=StoreType::T_NONE;
+	m_eBaseType=StoreType::T_NONE;
 	m_iState=0;
 	m_iSize=0;
 }
