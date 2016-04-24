@@ -9,7 +9,7 @@
 
 using namespace std;
 
-void Init()
+void Init()//hehe
 {
 	Lex.LexInit();
 	Lex.SetFileName(State.m_szSourceFile);
