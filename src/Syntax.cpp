@@ -48,11 +48,11 @@ bool CSyntax::SyntaxParse()
 	{
 		if (DeStack(iVal))
 		{
-			if (iVal==0)
+			if (iVal==0)//空 推导 候选式
 			{
 				continue;
 			}
-			if (iVal<100)
+			if (iVal<100)//终结符
 			{
 				if (iVal==TokenList.at(iListPos).m_iKind)
 				{
@@ -64,7 +64,7 @@ bool CSyntax::SyntaxParse()
 					break;
 				}
 			}
-			if (iVal>=100 && iVal<300)
+			if (iVal>=100 && iVal<300)//非终结符
 			{
 				iCol=TokenList.at(iListPos).m_iKind;
 				iRow=iVal-100;
@@ -80,7 +80,7 @@ bool CSyntax::SyntaxParse()
 					EnStack(m_szProductList[iTmp]);
 				}
 			}
-			if (iVal>=300)
+			if (iVal>=300)//语义子程序标号
 			{
 				cout<<iVal<<',';
 

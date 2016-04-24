@@ -37,11 +37,11 @@
 		</Compiler>
 		<Unit filename="include/Afx.h" />
 		<Unit filename="include/CommonLib.h" />
-		<Unit filename="include/ErrorProc.h" />
 		<Unit filename="include/Global.h" />
 		<Unit filename="include/Lex.h" />
 		<Unit filename="include/State.h" />
 		<Unit filename="include/Structure.h" />
+		<Unit filename="include/SymbolTbl.h" />
 		<Unit filename="include/Syntax.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/Afx.cpp" />
@@ -51,6 +51,7 @@
 		<Unit filename="src/Lex.cpp" />
 		<Unit filename="src/State.cpp" />
 		<Unit filename="src/Structure.cpp" />
+		<Unit filename="src/SymbolTbl.cpp" />
 		<Unit filename="src/Syntax.cpp" />
 		<Extensions>
 			<code_completion />
