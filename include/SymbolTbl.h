@@ -3,6 +3,7 @@
 #include "Afx.h"
 #include "Structure.h"
 #include "CommonLib.h"
+#include "Type.h"
 using namespace std;
 class CSymbolTbl
 {
@@ -29,19 +30,21 @@ public:
 	int SearchEnumInfoTbl(int iProcIndex,string sName);
 	int SearchProcInfoTbl(string szName,bool bIsForward=true);
     int SearchVarInfoTbl(int iProcIndex,string szName);
+    int RecConstTbl(const string szValue,int iType);//注册常量函数(重载形式)
    /**************声明阶段***********************************/
     int SearchUseFileTbl(string szName);//文件信息表
+    bool PtrCheck(int &iPos);//检查指针声明是否合法
     /***************语句******************************************/
     /***************表达式******************************************/
     int SearchTypeSysTbl(int iOp,int iOp1Type,int iOp2Type=0);//类型系统表
     /***************操作数******************************************
 
 	bool ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List2);//两个过程原型单词流是否一致
-	int RecConstTbl(const string szValue,int iType);//注册常量函数(重载形式)
+
 	int RecConstTbl(const ConstInfo Value);//注册常量函数
 	int RecConstSetTbl(const string szValue);//注册集合常量函数
 	int CalcTypeSize(int iPos);//计算类型占用存储空间大小
-	bool PtrCheck(int &iPos);//检查指针声明是否合法
+
 	*/
 	int GetTmpVar(int iProcIndex,StoreType::CStoreType eStoreType);//申请一个类型为eStoreType的临时变量
 	int GetTmpVar(int iProcIndex);//申请一个临时变量

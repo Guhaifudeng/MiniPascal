@@ -6,7 +6,6 @@
 #include "State.h"
 #include "Lex.h"
 #include "Global.h"
-
 using namespace std;
 
 void Init()//hehe

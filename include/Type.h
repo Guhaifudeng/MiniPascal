@@ -5,10 +5,10 @@
 #include "State.h"
 #include "Afx.h"
 using namespace std;
-
 class CType
 {
 public:
+    static VarType getVarTypeStackElement(stack<VarType> VarTypeStack, int position);
 	static StoreType::CStoreType TokenToEnum(int iToken);//根据单词，计算得到相应的类型枚举值
 	static int GetTypeSize(StoreType::CStoreType eStoreType);//根据类型的枚举值，计算得到相应的类型的size值
 	static StoreType::CStoreType GetOpType(OpInfo Op);//获取操作数实际类型
@@ -21,8 +21,9 @@ public:
 	static bool IsInt(StoreType::CStoreType eStoreType);//是传入的实际类型是否为整型
 	static bool IsOrd(OpInfo Op);//
 	static bool IsSetItem(OpInfo Op);//
-//	static bool IsOffsetVar(stack<VarType> VarTypeStack);//
+	static bool IsOffsetVar(stack<VarType> VarTypeStack);//
 	static void InitTypeSysTbl();//初始化符号表
+
 };
 
 #endif // CTYPE_H

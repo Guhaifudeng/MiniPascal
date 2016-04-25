@@ -5,6 +5,8 @@
 #include "Structure.h"
 #include "CommonLib.h"
 #include "ErrorProc.h"
+#include "CType.h"
+#include "SymbolTbl.h"
 using namespace std;
 class CLex
 {

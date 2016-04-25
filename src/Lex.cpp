@@ -1,7 +1,7 @@
 #include "Lex.h"
 #include "Afx.h"
 extern CState State;
-
+extern CSymbolTbl SymbolTbl;
 CLex::CLex()
 {
 }
@@ -50,7 +50,7 @@ bool CLex::Process(int iTag)
             {
                 if (m_szBuffer.compare("TRUE")==0 || m_szBuffer.compare("FALSE")==0 )
                 {
-                    //EmitToken(3,SymbolTbl.RecConstTbl(m_szBuffer,7),m_iRow);// 符号表-存储常量
+                    EmitToken(3,SymbolTbl.RecConstTbl(m_szBuffer,7),m_iRow);// 符号表-存储常量
                 }
                 else
                 {
@@ -61,7 +61,7 @@ bool CLex::Process(int iTag)
 
         if (iTag>=-6 && iTag<=-2)
         {
-            //EmitToken(-iTag,SymbolTbl.RecConstTbl(m_szBuffer,-iTag),m_iRow);// 符号表-存储常量
+            EmitToken(-iTag,SymbolTbl.RecConstTbl(m_szBuffer,-iTag),m_iRow);// 符号表-存储常量
         }
         if (iTag>=-15 && iTag<=-7)
         {
@@ -77,7 +77,7 @@ bool CLex::Process(int iTag)
         {
             BufferBack();
             m_szBuffer=trim(m_szBuffer);
-            //EmitToken(3,SymbolTbl.RecConstTbl(m_szBuffer,3),m_iRow); //符号表-存储常量
+            EmitToken(3,SymbolTbl.RecConstTbl(m_szBuffer,3),m_iRow); //符号表-存储常量
         }
 
         m_szBuffer="";

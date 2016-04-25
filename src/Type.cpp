@@ -304,13 +304,27 @@ bool CType::IsInt(StoreType::CStoreType eStoreType)//根据实际类型判断是否为整型
 		return true;
 	return false;
 }
-/*
+VarType CType::getVarTypeStackElement(stack<VarType> VarTypeStack, int position)
+{
+        VarType result = VarTypeStack.top();
+        VarTypeStack.pop();
+        if (VarTypeStack.size() == position)
+        {
+//            stack.push(result);
+            return result;
+        }else {
+            VarType element = getVarTypeStackElement(VarTypeStack, position);
+            VarTypeStack.push(element);
+            return element;
+        }
+}
 bool CType::IsOffsetVar(stack<VarType> VarTypeStack)//
 {
-	for(iterator i = VarTypeStack.begin();i!=VarTypeStack.end();i++)
-		if (VarTypeStack[*i].m_StoreType==StoreType::T_ARRAY ||
-			VarTypeStack[*i].m_StoreType==StoreType::T_RECORD)
+	for(int i=VarTypeStack.size();i < 1;i--){
+		if (getVarTypeStackElement(VarTypeStack,i).m_StoreType==StoreType::T_ARRAY ||
+			getVarTypeStackElement(VarTypeStack,i).m_StoreType==StoreType::T_RECORD)
 			return true;
+	}
 	return false;
 }
-*/
+

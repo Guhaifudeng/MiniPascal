@@ -461,7 +461,7 @@ struct ProcDefToken
 struct UseFile
 {
 	string m_szFileName;
-	bool m_bFlag;
+	bool m_bFlag;//避免重复引用或循环引用，文件合并时
 	UseFile(string szFileName,bool Flag);
 };
 #endif // STRUCTURE_H

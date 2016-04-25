@@ -1,5 +1,4 @@
 #include "SymbolTbl.h"
-
 //extern map<int,vector<CBasicBlock>> BasicBlock;
 extern CSymbolTbl SymbolTbl;
 CSymbolTbl::CSymbolTbl(void)
@@ -112,7 +111,7 @@ int CSymbolTbl::RecConstSetTbl(const string szValue)
 	CType::ProcessConstType(SymbolTbl.ConstInfoTbl.size()-1);
 	return SymbolTbl.ConstInfoTbl.size()-1;
 }
-
+*/
 int CSymbolTbl::RecConstTbl(const string szValue,int iType)
 {
 	ConstInfo Tmp;
@@ -138,7 +137,7 @@ int CSymbolTbl::RecConstTbl(const string szValue,int iType)
 	CType::ProcessConstType(SymbolTbl.ConstInfoTbl.size()-1);
 	return SymbolTbl.ConstInfoTbl.size()-1;
 }
-*/
+
 int CSymbolTbl::SearchLabelInfoTbl(int iProcIndex,string szName)
 {
 	int i=LabelInfoTbl.size()-1;
@@ -440,8 +439,8 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 		}
 	}
 }
-
-bool CSymbolTbl::PtrCheck(int &iPos)
+*/
+bool CSymbolTbl::PtrCheck(int &iPos)//指针类型-基类型回填
 {
 	int i=0;
 	for (i=0;i<TypeInfoTbl.size();i++)
@@ -451,7 +450,7 @@ bool CSymbolTbl::PtrCheck(int &iPos)
 			int j=SearchTypeInfoTbl(TypeInfoTbl[i].m_iProcIndex,TypeInfoTbl[i].m_szContent,false);
 			if (j==-1)
 			{
-				j=SearchTypeInfoTbl(0,TypeInfoTbl[i].m_szContent,false);
+				j=SearchTypeInfoTbl(0,TypeInfoTbl[i].m_szContent,false);//全局
 			}
 			if (j!=-1)
 			{
@@ -467,7 +466,7 @@ bool CSymbolTbl::PtrCheck(int &iPos)
 	}
 	return true;
 }
-
+/*
 bool CSymbolTbl::IsVarPara(string szName,int iProcIndex)
 {
 	for (int i=SymbolTbl.ProcInfoTbl.at(iProcIndex).m_ParaTbl.size()-1;i>=0;i--)
