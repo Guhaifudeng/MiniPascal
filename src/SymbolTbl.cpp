@@ -246,7 +246,7 @@ void CSymbolTbl::Clear()
 		ProcStack.pop();
 	}
 }
-/*
+
 bool CSymbolTbl::ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List2)
 {
 	if (List1.size()!=List2.size())
@@ -271,7 +271,7 @@ bool CSymbolTbl::ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List
 
 	return true;
 }
-
+/*
 bool TypeSizeCmp(FieldMap p1,FieldMap p2)
 {
 	return p1.iSize<p2.iSize?true:false;

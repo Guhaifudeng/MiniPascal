@@ -254,16 +254,21 @@
 	<string>
 	<iostream>
 
-1461580354 d:\codeblock\meopascal\include\symboltbl.h
+1461589200 d:\codeblock\meopascal\include\symboltbl.h
 	"Afx.h"
 	"Structure.h"
 	"CommonLib.h"
 	"Type.h"
 
-1461546026 source:d:\codeblock\meopascal\src\semantic.cpp
+1461589314 source:d:\codeblock\meopascal\src\semantic.cpp
 	"Semantic.h"
 
-1461580859 d:\codeblock\meopascal\include\semantic.h
+1461589322 d:\codeblock\meopascal\include\semantic.h
+	"Afx.h"
+	"Structure.h"
+	"State.h"
+	"Lex.h"
+	"SymbolTbl.h"
 
 1461583951 d:\codeblock\meopascal\include\type.h
 	"Structure.h"
@@ -271,6 +276,6 @@
 	"State.h"
 	"Afx.h"
 
-1461580757 source:d:\codeblock\meopascal\src\type.cpp
+1461583924 source:d:\codeblock\meopascal\src\type.cpp
 	"Type.h"
 
