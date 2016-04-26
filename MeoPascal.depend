@@ -119,7 +119,7 @@
 1460904329 source:h:\codeblock\compiler\minipascal\src\afx.cpp
 	"Afx.h"
 
-1461511440 h:\codeblock\compiler\minipascal\include\afx.h
+1461682441 h:\codeblock\compiler\minipascal\include\afx.h
 	"math.h"
 	"io.h"
 	<vector>
@@ -135,12 +135,13 @@
 	<list>
 	<fstream>
 
-1461516106 h:\codeblock\compiler\minipascal\include\structure.h
+1461687265 h:\codeblock\compiler\minipascal\include\structure.h
 	"Afx.h"
 
-1461509660 h:\codeblock\compiler\minipascal\include\errorproc.h
+1461682441 h:\codeblock\compiler\minipascal\include\errorproc.h
 	"Afx.h"
 	"Structure.h"
+	"State.h"
 
 1461512455 h:\codeblock\compiler\minipascal\include\commonlib.h
 	"Afx.h"
@@ -151,38 +152,41 @@
 	"Afx.h"
 	"ErrorProc.h"
 
-1461509660 h:\codeblock\compiler\minipascal\include\lex.h
+1461596175 h:\codeblock\compiler\minipascal\include\lex.h
 	"Afx.h"
 	"State.h"
 	"Structure.h"
 	"CommonLib.h"
 	"ErrorProc.h"
+	"CType.h"
+	"SymbolTbl.h"
 
-1461511643 h:\codeblock\compiler\minipascal\include\global.h
+1461682441 h:\codeblock\compiler\minipascal\include\global.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
 	"Lex.h"
 	"Syntax.h"
+	"Semantic.h"
 
 1461514076 source:h:\codeblock\compiler\minipascal\src\commonlib.cpp
 	"CommonLib.h"
 	"Afx.h"
 
-1461509660 source:h:\codeblock\compiler\minipascal\src\errorproc.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\src\errorproc.cpp
 	"Afx.h"
 	"ErrorProc.h"
 
-1461512646 source:h:\codeblock\compiler\minipascal\src\global.cpp
+1461686774 source:h:\codeblock\compiler\minipascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 	"Opti_Tbl.h"
 
-1461509660 source:h:\codeblock\compiler\minipascal\src\lex.cpp
+1461596175 source:h:\codeblock\compiler\minipascal\src\lex.cpp
 	"Lex.h"
 	"Afx.h"
 
-1461513348 source:h:\codeblock\compiler\minipascal\main.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -190,6 +194,7 @@
 	"State.h"
 	"Lex.h"
 	"Global.h"
+	"SymbolTbl.h"
 
 1460905359 h:\codeblock\compiler\minipascal\include\stdafx.h
 	"math.h"
@@ -207,14 +212,14 @@
 	<list>
 	<fstream>
 
-1461509660 source:h:\codeblock\compiler\minipascal\src\state.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\src\state.cpp
 	"State.h"
 	"Afx.h"
 
 1460904329 source:h:\codeblock\compiler\minipascal\src\stdafx.cpp
 	"Afx.h"
 
-1461513727 source:h:\codeblock\compiler\minipascal\src\structure.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\src\structure.cpp
 	"Structure.h"
 	"Afx.h"
 
@@ -233,21 +238,22 @@
 1461673693 source:d:\codeblock\meopascal\src\symboltbl.cpp
 	"SymbolTbl.h"
 
-1461509660 h:\codeblock\compiler\minipascal\include\syntax.h
+1461682441 h:\codeblock\compiler\minipascal\include\syntax.h
 	"Afx.h"
 	"Structure.h"
 	"ErrorProc.h"
 	"CommonLib.h"
 
-1461518100 h:\codeblock\compiler\minipascal\include\symboltbl.h
+1461682441 h:\codeblock\compiler\minipascal\include\symboltbl.h
 	"Afx.h"
 	"Structure.h"
 	"CommonLib.h"
+	"Type.h"
 
-1461516658 source:h:\codeblock\compiler\minipascal\src\symboltbl.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\src\symboltbl.cpp
 	"SymbolTbl.h"
 
-1461509660 source:h:\codeblock\compiler\minipascal\src\syntax.cpp
+1461682441 source:h:\codeblock\compiler\minipascal\src\syntax.cpp
 	"Syntax.h"
 	"Afx.h"
 	"State.h"
@@ -280,5 +286,26 @@
 	"Afx.h"
 
 1461665034 source:d:\codeblock\meopascal\src\type.cpp
+	"Type.h"
+
+1461682441 h:\codeblock\compiler\minipascal\include\type.h
+	"Structure.h"
+	"CommonLib.h"
+	"State.h"
+	"Afx.h"
+
+1461682441 h:\codeblock\compiler\minipascal\include\semantic.h
+	"Afx.h"
+	"Structure.h"
+	"State.h"
+	"Lex.h"
+	"SymbolTbl.h"
+
+1461688000 h:\codeblock\compiler\minipascal\include\opti_tbl.h
+
+1461682441 source:h:\codeblock\compiler\minipascal\src\semantic.cpp
+	"Semantic.h"
+
+1461682441 source:h:\codeblock\compiler\minipascal\src\type.cpp
 	"Type.h"
 

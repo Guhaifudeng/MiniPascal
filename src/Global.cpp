@@ -1,6 +1,6 @@
 #include "Global.h"
 #include "Afx.h"
-
+#define OPTI_TBL_NUM 115
 vector<ErrorInfo> ErrorProcess;         //错误信息表
 vector<CToken> TokenList;				//输出单词流
 CState State;
@@ -22,9 +22,9 @@ SemanticFunc FuncList[200]={NULL,semantic001,semantic002,semantic003,semantic004
 
 CSymbolTbl SymbolTbl;//符号表
 //map<int,vector<CBasicBlock>> BasicBlock;
-/*
+
 Opti_Tbl opti_tbl[OPTI_TBL_NUM]=
 {
 #include "Opti_Tbl.h"
 };
-*/
+

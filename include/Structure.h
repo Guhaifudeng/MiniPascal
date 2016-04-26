@@ -557,4 +557,20 @@ struct FieldMap
 	int iSize;
 	FieldMap(FieldInfo *p,int i);
 };
+/***************优化******************/
+struct Opti_Tbl
+{
+	OpType Op;//IR操作符
+	enum Flag{None,CondJmp,NonCondJmp,Lbl,//跳转情况-标号、条件跳转、无条件跳转
+		Exp1,Exp1_2,Exp1_3,Exp1_2_3,nExp1,nExp1_2,nExp1_3,nExp1_2_3,//
+		ToInt,ToReal,ToSingle,ToSmall,ToWord,ToLong,ToShort,ToByte,ToLong8,ToAssign,
+		DeadCode,Commutative};
+	int eJmpType;
+	int eExpType;
+	int eConstPropType;
+	int eOpToken;
+	int eDeadCode;
+	int eAlgebraicProcess;
+	int eCommutative;
+};
 #endif // STRUCTURE_H
