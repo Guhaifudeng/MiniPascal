@@ -16,7 +16,7 @@ public:
 	static int  TypeCompatible( OpInfo Op1,int Op);//
 	static void ProcessConstType(int iPos);//根据字面常量的值，评估常量的实际类型
 	static int GetRealType(int iTypeLink);//根据类型表项指针获取实际类型
-//	static int GetOpTypeLink(OpInfo Op);//
+	static int GetOpTypeLink(OpInfo Op);//
 	static bool IsInt(int iTypeLink);//是否为整型
 	static bool IsInt(StoreType::CStoreType eStoreType);//是传入的实际类型是否为整型
 	static bool IsOrd(OpInfo Op);//

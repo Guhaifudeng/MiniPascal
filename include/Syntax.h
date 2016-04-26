@@ -7,7 +7,7 @@
 using namespace std;
 extern int iListPos;
 extern vector<CToken> TokenList;
-//extern SemanticFunc FuncList[200];
+extern SemanticFunc FuncList[200];
 class CSyntax
 {
 private:

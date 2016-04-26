@@ -2,6 +2,8 @@
 #define STRUCTURE_H
 #include "Afx.h"
 using namespace std;
+typedef bool (*SemanticFunc)();
+
 /********************词法分析***********************************/
 struct LineInfo
 {
@@ -137,6 +139,12 @@ struct ParaInfo
 };
 
 
+struct AsmPara
+{
+	string m_szName;
+	int m_iLink;
+	enum {RW,W,R,N} flag;
+};
 
 
 
@@ -146,7 +154,7 @@ struct VarType
 {
 	StoreType::CStoreType m_StoreType;
 	int m_iLink;
-	VarType(StoreType StoreType,int iLink);
+	VarType(StoreType::CStoreType StoreType,int iLink);
 	VarType();
 };
 struct OpInfo//操作数
@@ -404,6 +412,14 @@ enum OpType//操作符-操作类型
 	TypeCast	=	-50
 
 };
+enum BasicOpType
+{
+	ADD=23,
+	SUB=24,
+	MUL=25,
+	DIV=26,
+	MOV=17
+};
 
 struct IRCode
 {
@@ -463,5 +479,82 @@ struct UseFile
 	string m_szFileName;
 	bool m_bFlag;//避免重复引用或循环引用，文件合并时
 	UseFile(string szFileName,bool Flag);
+};
+/*******************语句***********************************************************************/
+struct Statement
+{
+	enum {IF,WHILE,FOR,REPEAT,CASE} m_eType;
+	typedef struct LabelIdx
+	{
+		enum LabelType{TrueLabel,FalseLabel,ExitLabel,EntryLabel,CaseLabel} m_LabelType;
+		OpInfo m_Label;
+		int m_iIdx;
+		int m_iConst;	//case语句中标号常量的指针
+	};
+	vector<LabelIdx> m_Labels;
+	int m_iLoopVar;//在case语句分析时，借用作case跳转列表的插入位置
+	bool m_bIsDownto;
+	bool m_bIsElse;
+	OpInfo m_CaseExp;
+	OpInfo GetLabel(LabelIdx::LabelType TmpLabelType);
+};
+
+
+struct ProcCall
+{
+	int m_iProcId;
+	int m_iProcPtr;
+	enum {Call,PtrCall} m_eCallType;
+	vector<OpInfo> m_Paras;
+	OpInfo m_Return;
+};
+
+/***********************表达式**********************************************************************/
+
+/***********************操作数****************************************************************************/
+struct OffsetType{
+    enum COffsetType {ConstOffset,VarOffset,NoneOffset};
+};
+struct OffsetStruct
+{
+	OffsetType::COffsetType m_eOffsetType;
+	int m_iOffsetLink;
+	OffsetStruct(OffsetType::COffsetType p1,int p2)
+	{
+		m_eOffsetType=p1;
+		m_iOffsetLink=p2;
+	}
+};
+
+struct Var
+{
+	stack<VarType> m_VarTypeStack;
+	int m_iVarLink;
+	OffsetType::COffsetType m_eOffsetType;
+	int m_iOffsetLink;
+	int m_iDim;
+	bool m_bRef;
+	bool m_bVarRef;
+	vector<OffsetStruct> m_OffsetVec;
+	Var();
+};
+
+struct Array
+{
+	Var m_Array;
+	int m_iDim;
+};
+struct WithField
+{
+	Var m_Var;
+	int m_iRestoreIR;
+};
+
+/*************存储分配***************/
+struct FieldMap
+{
+	FieldInfo* ptr;
+	int iSize;
+	FieldMap(FieldInfo *p,int i);
 };
 #endif // STRUCTURE_H

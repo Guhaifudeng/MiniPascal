@@ -1,5 +1,6 @@
 #ifndef AFX_H
 #define AFX_H
+#define _SOURCE_EXT ".nps"
 //系统文件
 #include "math.h"
 #include "io.h"

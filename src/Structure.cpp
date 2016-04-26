@@ -93,3 +93,41 @@ UseFile::UseFile(string szFileName,bool Flag)
 	m_szFileName=szFileName;
 	m_bFlag=Flag;
 }
+/**************************Óï¾ä**********************************************/
+
+OpInfo Statement::GetLabel(LabelIdx::LabelType TmpLabelType)
+{
+	int i;
+	for (i=0;i<m_Labels.size();i++)
+	{
+		if (m_Labels.at(i).m_LabelType==TmpLabelType)
+			break;
+	}
+	return m_Labels.at(i).m_Label;
+}
+/**************************²Ù×÷Êý**********************************************/
+VarType::VarType(StoreType::CStoreType StoreType,int iLink)
+{
+	m_StoreType=StoreType;
+	m_iLink=iLink;
+}
+VarType::VarType()
+{
+}
+
+Var::Var()
+{
+	m_iVarLink=-1;
+	while(!m_VarTypeStack.empty())
+        m_VarTypeStack.pop();
+	m_eOffsetType=OffsetType::NoneOffset;
+	m_iOffsetLink=-1;
+	m_bRef=false;
+	m_bVarRef=false;
+}
+/********´æ´¢·ÖÅä**********/
+FieldMap::FieldMap(FieldInfo *p,int i)
+{
+	ptr=p;
+	iSize=i;
+}

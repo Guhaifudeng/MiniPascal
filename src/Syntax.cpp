@@ -82,13 +82,13 @@ bool CSyntax::SyntaxParse()
 			}
 			if (iVal>=300)//语义子程序标号
 			{
-				cout<<iVal<<',';
+				cout<<iVal-300<<',';
 
-				/*if (!FuncList[iVal-300]())
+				if (!FuncList[iVal-300]())
 				{
 					break;
 				}
-				*/
+
 			}
 		}
 	}

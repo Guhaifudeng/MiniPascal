@@ -7,7 +7,7 @@ CState State;
 CLex Lex;//词法分析
 CSyntax Syntax;//语法分析
 int iListPos;							//当前语法分析单词下标
-/*
+
 SemanticFunc FuncList[200]={NULL,semantic001,semantic002,semantic003,semantic004,semantic005,semantic006,semantic007,semantic008,semantic009,semantic010,
 								 semantic011,semantic012,semantic013,semantic014,semantic015,semantic016,semantic017,semantic018,semantic019,semantic020,
 								 semantic021,semantic022,semantic023,semantic024,semantic025,semantic026,semantic027,semantic028,semantic029,semantic030,
@@ -19,7 +19,7 @@ SemanticFunc FuncList[200]={NULL,semantic001,semantic002,semantic003,semantic004
 								 semantic081,semantic082,semantic083,semantic084,semantic085,semantic086,semantic087,semantic088,semantic089,semantic090,
 								 semantic091,semantic092,semantic093,semantic094,semantic095,semantic096,semantic097,semantic098,semantic099,semantic100,
 								 semantic101,semantic102};
-*/
+
 CSymbolTbl SymbolTbl;//符号表
 //map<int,vector<CBasicBlock>> BasicBlock;
 /*

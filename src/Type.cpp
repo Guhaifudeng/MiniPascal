@@ -169,7 +169,7 @@ void CType::ProcessConstType(int iPos)
 
 	}
 }
-/*
+
 int CType::GetOpTypeLink(OpInfo Op)//得到操作数类型指针
 {
 	if (Op.m_iType==OpInfo::CONST)
@@ -206,7 +206,7 @@ int CType::GetOpTypeLink(OpInfo Op)//得到操作数类型指针
 		}
 		return i;
 	}
-}*/
+}
 StoreType::CStoreType CType::GetOpType(OpInfo Op)//得到操作数实际类型
 {
 	if (Op.m_iType==OpInfo::CONST)
@@ -320,7 +320,7 @@ VarType CType::getVarTypeStackElement(stack<VarType> VarTypeStack, int position)
 }
 bool CType::IsOffsetVar(stack<VarType> VarTypeStack)//
 {
-	for(int i=VarTypeStack.size();i < 1;i--){
+	for(int i=VarTypeStack.size()-1;i < 0;i--){
 		if (getVarTypeStackElement(VarTypeStack,i).m_StoreType==StoreType::T_ARRAY ||
 			getVarTypeStackElement(VarTypeStack,i).m_StoreType==StoreType::T_RECORD)
 			return true;

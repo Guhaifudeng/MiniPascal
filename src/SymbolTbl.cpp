@@ -90,7 +90,7 @@ int CSymbolTbl::GetTmpLabel(int iProcIndex)
 	AddLabel(Tmp);
 	return LabelInfoTbl.size()-1;
 }
-/*
+
 int CSymbolTbl::RecConstTbl(const ConstInfo Value)
 {
 	SymbolTbl.AddConst(Value);
@@ -111,7 +111,7 @@ int CSymbolTbl::RecConstSetTbl(const string szValue)
 	CType::ProcessConstType(SymbolTbl.ConstInfoTbl.size()-1);
 	return SymbolTbl.ConstInfoTbl.size()-1;
 }
-*/
+
 int CSymbolTbl::RecConstTbl(const string szValue,int iType)
 {
 	ConstInfo Tmp;
@@ -271,7 +271,7 @@ bool CSymbolTbl::ProcDefTokenTblCompare(vector<CToken> List1,vector<CToken> List
 
 	return true;
 }
-/*
+
 bool TypeSizeCmp(FieldMap p1,FieldMap p2)
 {
 	return p1.iSize<p2.iSize?true:false;
@@ -328,7 +328,7 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 				break;
 			case StoreType::T_RECORD:
 				{
-					map<string,set<string>> Tmp;
+					map<string,set<string> > Tmp;
 
 					vector<FieldMap> TmpFieldList;
 
@@ -340,7 +340,7 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 							{
 								set<string> TmpSet;
 								TmpSet.insert(TypeInfoTbl[iPos].m_FieldInfo.at(i).m_szVarFieldConst);
-								Tmp.insert(pair<string,set<string>>(TypeInfoTbl[iPos].m_FieldInfo.at(i).m_szVarFieldFlag,TmpSet));
+								Tmp.insert(pair<string,set<string> >(TypeInfoTbl[iPos].m_FieldInfo.at(i).m_szVarFieldFlag,TmpSet));
 							}
 							else
 								Tmp.find(TypeInfoTbl[iPos].m_FieldInfo.at(i).m_szVarFieldFlag)->second.insert(TypeInfoTbl[iPos].m_FieldInfo.at(i).m_szVarFieldConst);
@@ -380,7 +380,7 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 						}
 					}
 					//计算可变部分size
-					for(map<string,set<string>>::iterator it=Tmp.begin();it!=Tmp.end();it++)
+					for(map<string,set<string> >::iterator it=Tmp.begin();it!=Tmp.end();it++)
 					{
 						int iMax=0;
 						if (iOffset%4!=0)
@@ -439,7 +439,7 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 		}
 	}
 }
-*/
+
 bool CSymbolTbl::PtrCheck(int &iPos)//指针类型-基类型回填
 {
 	int i=0;
@@ -466,7 +466,7 @@ bool CSymbolTbl::PtrCheck(int &iPos)//指针类型-基类型回填
 	}
 	return true;
 }
-/*
+
 bool CSymbolTbl::IsVarPara(string szName,int iProcIndex)
 {
 	for (int i=SymbolTbl.ProcInfoTbl.at(iProcIndex).m_ParaTbl.size()-1;i>=0;i--)
@@ -485,7 +485,7 @@ bool CSymbolTbl::IsVarPara(string szName,int iProcIndex)
 	}
 	return false;
 }
-*/
+
 int CSymbolTbl::SearchTypeSysTbl(int iOp,int iOp1Type,int iOp2Type)
 {
 	int i=TypeSysTbl.size()-1;
@@ -500,9 +500,10 @@ int CSymbolTbl::SearchTypeSysTbl(int iOp,int iOp1Type,int iOp2Type)
 	return i;
 
 }
-/*
+
 void CSymbolTbl::PrintIR()
 {
+    cout<<"\n函数："+SymbolTbl.ProcInfoTbl.at(0).m_szName+"\n";
 	for(int i=0;i<SymbolTbl.ProcInfoTbl.size();i++)
 	{
 		if (SymbolTbl.ProcInfoTbl[i].m_bUsed==false)
@@ -518,7 +519,7 @@ void CSymbolTbl::PrintIR()
 			cout<<GetIRStr(SymbolTbl.ProcInfoTbl.at(i).m_Codes.at(j))<<'\n';
 		}
 	}
-}
+}/*
 string uddu_str(OpInfo Op)
 {
 	string str="du:";
@@ -536,12 +537,12 @@ string uddu_str(OpInfo Op)
 	}
 	return str;
 }
-
+*/
 bool CSymbolTbl::IsProcVar(string szName)
 {
 	return SearchProcInfoTbl(szName)==-1?false:true;
 }
-
+/*
 void CSymbolTbl::PrintBasicBlock()
 {
 	for(int i=0;i<SymbolTbl.ProcInfoTbl.size();i++)
@@ -571,7 +572,7 @@ void CSymbolTbl::PrintBasicBlock()
 		}
 	}
 }
-
+*/
 bool CSymbolTbl::IsTmpVar(int iPos)
 {
 	if (SymbolTbl.VarInfoTbl[iPos].m_szName.substr(0,2)=="_T")
@@ -584,4 +585,4 @@ bool CSymbolTbl::IsTmpVar(int iPos)
 	}
 }
 
-*/
+

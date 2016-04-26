@@ -37,6 +37,7 @@
 		</Compiler>
 		<Unit filename="include/Afx.h" />
 		<Unit filename="include/CommonLib.h" />
+		<Unit filename="include/ErrorProc.h" />
 		<Unit filename="include/Global.h" />
 		<Unit filename="include/Lex.h" />
 		<Unit filename="include/Semantic.h" />
