@@ -131,5 +131,23 @@ FieldMap::FieldMap(FieldInfo *p,int i)
 	ptr=p;
 	iSize=i;
 }
+LiveArea::LiveArea(int iDef,int iUse)
+{
+	m_iDef=iDef;
+	m_iUse=iUse;
+}
+
+LiveArea::LiveArea()
+{
+}
+
+TmpInfo::TmpInfo(int iLink,int iDef,int iUse,int iBlock)
+{
+	m_iLink=iLink;
+	m_LiveArea.m_iDef=iDef;
+	m_LiveArea.m_iUse=iUse;
+	m_iBlock=iBlock;
+	//m_bFlag=false;
+}
 
 /***********´úÂëÉú³É**************/
