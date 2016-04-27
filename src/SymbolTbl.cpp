@@ -309,7 +309,7 @@ int CSymbolTbl::CalcTypeSize(int iPos)
 					int i;
 					for (i=TypeInfoTbl[iPos].m_ArrayInfo.size()-1;i>=0;i--)
 					{
-						iSum=iSum*TypeInfoTbl[iPos].m_ArrayInfo.at(i).m_iEnd-TypeInfoTbl[iPos].m_ArrayInfo.at(i).m_iStart+1;
+						iSum=iSum*(TypeInfoTbl[iPos].m_ArrayInfo.at(i).m_iEnd-TypeInfoTbl[iPos].m_ArrayInfo.at(i).m_iStart+1);//这个地方是不是写错了
 					}
 					if (TypeInfoTbl[iPos].m_iLink!=-1)
 					{
