@@ -94,7 +94,7 @@ void COptimization::OptiPass()
     */
 	CDataFlowAnalysis::DataFlowAnalysis();
 
-    //	CMemShare::TmpMemShare();
+    CMemShare::TmpMemShare();
 
 }
 

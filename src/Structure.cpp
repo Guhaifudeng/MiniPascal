@@ -131,3 +131,5 @@ FieldMap::FieldMap(FieldInfo *p,int i)
 	ptr=p;
 	iSize=i;
 }
+
+/***********´úÂëÉú³É**************/

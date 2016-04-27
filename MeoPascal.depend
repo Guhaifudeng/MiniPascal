@@ -26,7 +26,7 @@
 	<list>
 	<fstream>
 
-1461737871 d:\codeblock\meopascal\include\structure.h
+1461746736 d:\codeblock\meopascal\include\structure.h
 	"Afx.h"
 	"Bits.h"
 
@@ -329,7 +329,7 @@
 	"SymbolTbl.h"
 	"Optimization.h"
 
-1461741581 d:\codeblock\meopascal\include\optimization.h
+1461747769 d:\codeblock\meopascal\include\optimization.h
 	"Afx.h"
 	"SymbolTbl.h"
 	"Structure.h"
@@ -339,6 +339,7 @@
 	"Copy_Prop.h"
 	"IRSimplify.h"
 	"DeadCodeElimination.h"
+	"MemShare.h"
 
 1461738057 d:\codeblock\meopascal\include\opti_tbl.h
 
@@ -390,4 +391,12 @@
 
 1461742179 source:d:\codeblock\meopascal\untitled1.cpp
 	<iostream>
+
+1461747734 d:\codeblock\meopascal\include\memshare.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461747693 source:d:\codeblock\meopascal\src\memshare.cpp
+	"MemShare.h"
 

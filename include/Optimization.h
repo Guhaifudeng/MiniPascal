@@ -11,6 +11,7 @@
 #include "Copy_Prop.h"//变量传播----变量+变量-->变量+常量
 #include "IRSimplify.h"//条件跳转优化--连续跳转优化---代数优化
 #include "DeadCodeElimination.h"//死代码(全局)----不可达代码
+#include "MemShare.h"
 using namespace std;
 extern CSymbolTbl SymbolTbl;
 extern map<OpType,Opti_Tbl*> OptiMap;

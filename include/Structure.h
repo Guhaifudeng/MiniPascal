@@ -587,4 +587,55 @@ struct CBasicBlock
 	CBits *InSet;
 	CBits *OutSet;
 };
+/**********存储优化*****************/
+enum ParseType {none,label,procedure,var,constant,type,function,statments};
+struct LiveArea
+{
+	int m_iDef;
+	int m_iUse;
+	LiveArea(int iDef,int iUse);
+	LiveArea();
+};
+struct TmpInfo
+{
+	int m_iLink;//指向临时变量符号信息的指针
+	int m_iBlock;//指向临时变量所属基本块信息的指针
+	LiveArea m_LiveArea;//活跃分析
+	//bool m_bFlag;
+	TmpInfo(int iLink,int iDef,int iUse,int iBlock);
+};
+
+struct Code
+{
+	string Label;
+	string Op;
+	vector<string> Operand1;
+	vector<string> Operand2;
+	vector<string> Operand3;
+	string Comment;
+};
+
+
+struct RegFlg
+{
+	char cFlg;
+	char cReg;
+	int iSize;
+};
+struct Pattern
+{
+	int iPrior;				//优先级
+	string szPattern;		//模板名称
+	vector<Code> CodeList;	//指令列表
+	vector<RegFlg> Flg;		//寄存器需求
+	vector<int> SaveReg;	//寄存器冲突
+};
+struct AsmCode
+{
+	string Lbl;
+	string Op;
+	string Op1;
+	string Op2;
+	string Content;
+};
 #endif // STRUCTURE_H
