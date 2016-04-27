@@ -27,4 +27,16 @@ Opti_Tbl opti_tbl[OPTI_TBL_NUM]=
 {
 #include "Opti_Tbl.h"
 };
+/**************DFA**********************/
+map<OpType,Opti_Tbl*> OptiMap;
 
+map<int,vector<CBasicBlock> > BasicBlock;
+map<string,vector<int> > VarDef;
+map<string,vector<int> > VarAllUse;
+set<int> bHasVisit;
+vector<CBasicBlock>* CurrentBasicBlock;
+/****************常量传播-常量折叠-常量优化******/
+
+COptimization Optimization;
+int iOptiLevel;
+bool bOptiChanged;

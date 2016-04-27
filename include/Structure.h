@@ -1,6 +1,7 @@
 #ifndef STRUCTURE_H
 #define STRUCTURE_H
 #include "Afx.h"
+#include "Bits.h"
 using namespace std;
 typedef bool (*SemanticFunc)();
 
@@ -572,5 +573,18 @@ struct Opti_Tbl
 	int eDeadCode;
 	int eAlgebraicProcess;
 	int eCommutative;
+};
+
+
+struct CBasicBlock
+{
+	int iStart;
+	int iEnd;
+	vector<int>DownFlow;
+	vector<int>UpFlow;
+	CBits *Def;
+	CBits *Use;
+	CBits *InSet;
+	CBits *OutSet;
 };
 #endif // STRUCTURE_H

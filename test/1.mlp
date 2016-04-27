@@ -1,0 +1,6 @@
+Program DatenTimeDemo(input,output);
+var i,j:integer;
+begin
+	i:=0;
+	i:=i+j;
+end.

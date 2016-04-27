@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461673734 source:d:\codeblock\meopascal\main.cpp
+1461677654 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -25,8 +25,9 @@
 	<list>
 	<fstream>
 
-1461673195 d:\codeblock\meopascal\include\structure.h
+1461723765 d:\codeblock\meopascal\include\structure.h
 	"Afx.h"
+	"Bits.h"
 
 1461670731 d:\codeblock\meopascal\include\errorproc.h
 	"Afx.h"
@@ -51,13 +52,14 @@
 	"CType.h"
 	"SymbolTbl.h"
 
-1461673185 d:\codeblock\meopascal\include\global.h
+1461728406 d:\codeblock\meopascal\include\global.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
 	"Lex.h"
 	"Syntax.h"
 	"Semantic.h"
+	"Optimization.h"
 
 1461545229 source:d:\codeblock\meopascal\src\commonlib.cpp
 	"CommonLib.h"
@@ -67,7 +69,7 @@
 	"Afx.h"
 	"ErrorProc.h"
 
-1461668679 source:d:\codeblock\meopascal\src\global.cpp
+1461728340 source:d:\codeblock\meopascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 	"Opti_Tbl.h"
@@ -308,4 +310,56 @@
 
 1461682441 source:h:\codeblock\compiler\minipascal\src\type.cpp
 	"Type.h"
+
+1461714910 source:d:\codeblock\meopascal\src\bits.cpp
+	"Bits.h"
+
+1461714910 d:\codeblock\meopascal\include\bits.h
+	"Afx.h"
+
+1461725424 source:d:\codeblock\meopascal\src\dataflowanalysis.cpp
+	"DataFlowAnalysis.h"
+
+1461725262 d:\codeblock\meopascal\include\dataflowanalysis.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"Optimization.h"
+
+1461728693 d:\codeblock\meopascal\include\optimization.h
+	"Afx.h"
+	"SymbolTbl.h"
+	"Structure.h"
+	"DataFlowAnalysis.h"
+	"Const_Prop.h"
+	"Const_Fold.h"
+	"Copy_Prop.h"
+
+1461714910 d:\codeblock\meopascal\include\opti_tbl.h
+
+1461728885 source:d:\codeblock\meopascal\src\const_fold.cpp
+	"Const_Fold.h"
+
+1461729033 d:\codeblock\meopascal\include\const_fold.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"Semantic.h"
+
+1461728622 d:\codeblock\meopascal\include\const_prop.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461729306 d:\codeblock\meopascal\include\copy_prop.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461728535 source:d:\codeblock\meopascal\src\const_prop.cpp
+	"Const_Prop.h"
+
+1461728380 source:d:\codeblock\meopascal\src\optimization.cpp
+	"Optimization.h"
+	"Optimization.h"
 
