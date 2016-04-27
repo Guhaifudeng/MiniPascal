@@ -141,22 +141,24 @@
 	<list>
 	<fstream>
 
-1461687265 h:\codeblock\compiler\minipascal\include\structure.h
+1461767255 h:\codeblock\compiler\minipascal\include\structure.h
 	"Afx.h"
+	"Bits.h"
 
 1461682441 h:\codeblock\compiler\minipascal\include\errorproc.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
 
-1461512455 h:\codeblock\compiler\minipascal\include\commonlib.h
+1461771747 h:\codeblock\compiler\minipascal\include\commonlib.h
 	"Afx.h"
 	"Structure.h"
 	"SymbolTbl.h"
 
-1460905568 h:\codeblock\compiler\minipascal\include\state.h
+1461767255 h:\codeblock\compiler\minipascal\include\state.h
 	"Afx.h"
 	"ErrorProc.h"
+	<unistd.h>
 
 1461596175 h:\codeblock\compiler\minipascal\include\lex.h
 	"Afx.h"
@@ -167,15 +169,18 @@
 	"CType.h"
 	"SymbolTbl.h"
 
-1461682441 h:\codeblock\compiler\minipascal\include\global.h
+1461772831 h:\codeblock\compiler\minipascal\include\global.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
 	"Lex.h"
 	"Syntax.h"
 	"Semantic.h"
+	"Optimization.h"
+	"Peep_Hole.h"
+	"Target.h"
 
-1461514076 source:h:\codeblock\compiler\minipascal\src\commonlib.cpp
+1461771450 source:h:\codeblock\compiler\minipascal\src\commonlib.cpp
 	"CommonLib.h"
 	"Afx.h"
 
@@ -183,7 +188,7 @@
 	"Afx.h"
 	"ErrorProc.h"
 
-1461686774 source:h:\codeblock\compiler\minipascal\src\global.cpp
+1461772815 source:h:\codeblock\compiler\minipascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 	"Opti_Tbl.h"
@@ -192,7 +197,7 @@
 	"Lex.h"
 	"Afx.h"
 
-1461682441 source:h:\codeblock\compiler\minipascal\main.cpp
+1461772080 source:h:\codeblock\compiler\minipascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -201,6 +206,8 @@
 	"Lex.h"
 	"Global.h"
 	"SymbolTbl.h"
+	"Optimization.h"
+	"MemoryAlloc.h"
 
 1460905359 h:\codeblock\compiler\minipascal\include\stdafx.h
 	"math.h"
@@ -218,14 +225,15 @@
 	<list>
 	<fstream>
 
-1461682441 source:h:\codeblock\compiler\minipascal\src\state.cpp
+1461772351 source:h:\codeblock\compiler\minipascal\src\state.cpp
 	"State.h"
 	"Afx.h"
+	<string.h>
 
 1460904329 source:h:\codeblock\compiler\minipascal\src\stdafx.cpp
 	"Afx.h"
 
-1461682441 source:h:\codeblock\compiler\minipascal\src\structure.cpp
+1461767256 source:h:\codeblock\compiler\minipascal\src\structure.cpp
 	"Structure.h"
 	"Afx.h"
 
@@ -244,7 +252,7 @@
 1461673693 source:d:\codeblock\meopascal\src\symboltbl.cpp
 	"SymbolTbl.h"
 
-1461682441 h:\codeblock\compiler\minipascal\include\syntax.h
+1461771976 h:\codeblock\compiler\minipascal\include\syntax.h
 	"Afx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -256,7 +264,7 @@
 	"CommonLib.h"
 	"Type.h"
 
-1461682441 source:h:\codeblock\compiler\minipascal\src\symboltbl.cpp
+1461767256 source:h:\codeblock\compiler\minipascal\src\symboltbl.cpp
 	"SymbolTbl.h"
 
 1461682441 source:h:\codeblock\compiler\minipascal\src\syntax.cpp
@@ -307,7 +315,7 @@
 	"Lex.h"
 	"SymbolTbl.h"
 
-1461688000 h:\codeblock\compiler\minipascal\include\opti_tbl.h
+1461767255 h:\codeblock\compiler\minipascal\include\opti_tbl.h
 
 1461682441 source:h:\codeblock\compiler\minipascal\src\semantic.cpp
 	"Semantic.h"
@@ -409,4 +417,107 @@
 
 1461752278 source:d:\codeblock\meopascal\src\memoryalloc.cpp
 	"MemoryAlloc.h"
+
+1461691258 source:h:\codeblock\compiler\minipascal\src\bits.cpp
+	"Bits.h"
+
+1461691241 h:\codeblock\compiler\minipascal\include\bits.h
+	"Afx.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\optimization.h
+	"Afx.h"
+	"SymbolTbl.h"
+	"Structure.h"
+	"DataFlowAnalysis.h"
+	"Const_Prop.h"
+	"Const_Fold.h"
+	"Copy_Prop.h"
+	"IRSimplify.h"
+	"DeadCodeElimination.h"
+	"MemShare.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\dataflowanalysis.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"Optimization.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\const_prop.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\const_fold.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"Semantic.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\copy_prop.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\irsimplify.h
+	"Structure.h"
+	"Afx.h"
+	"SymbolTbl.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\deadcodeelimination.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"DataFlowAnalysis.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\memshare.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+
+1461767255 h:\codeblock\compiler\minipascal\include\memoryalloc.h
+	"Afx.h"
+	"SymbolTbl.h"
+	"CommonLib.h"
+	"Structure.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\const_fold.cpp
+	"Const_Fold.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\const_prop.cpp
+	"Const_Prop.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\copy_prop.cpp
+	"Copy_Prop.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\dataflowanalysis.cpp
+	"DataFlowAnalysis.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\deadcodeelimination.cpp
+	"DeadCodeElimination.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\irsimplify.cpp
+	"IRSimplify.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\memoryalloc.cpp
+	"MemoryAlloc.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\memshare.cpp
+	"MemShare.h"
+
+1461767256 source:h:\codeblock\compiler\minipascal\src\optimization.cpp
+	"Optimization.h"
+	"Optimization.h"
+
+1461772847 source:h:\codeblock\compiler\minipascal\src\peep_hole.cpp
+
+1461772772 h:\codeblock\compiler\minipascal\include\peep_hole.h
+
+1461772788 h:\codeblock\compiler\minipascal\include\target.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"DataFlowAnalysis.h"
+
+1461772874 source:h:\codeblock\compiler\minipascal\src\target.cpp
+	"Target.h"
 

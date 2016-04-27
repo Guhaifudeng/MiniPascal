@@ -63,7 +63,11 @@ int main(int argc, char** argv)
 	}
 	//运行时刻环境
 	CMemoryAlloc::MemoryAlloc();
+	//目标代码生成
+	target.IRtoASM();
 
+	//输出asm文件
+	target.WriteFile(State.m_szOutputFile);
 }
 
 /*
@@ -96,11 +100,7 @@ int main(int argc, char** argv)
 
 
 
-	//目标代码生成
-	target.IRtoASM();
 
-	//输出asm文件
-	target.WriteFile(State.m_szOutputFile);
 
 
 }

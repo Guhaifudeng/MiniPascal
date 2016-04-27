@@ -2,11 +2,10 @@
 
 extern CState State;
 
-extern map<int,vector<AsmCode>> AsmCodeList;
+extern map<int,vector<AsmCode> > AsmCodeList;
 
 extern CSymbolTbl SymbolTbl;
 
-CTarget target;
 
 CInstruction::CInstruction(string szInsStr,Pattern &Tmp)
 {
@@ -344,7 +343,7 @@ bool CCodePattern::SearchPattern(string szStr,Pattern &Ret)
 int CTarget::RegSeek(OpInfo op,int iSize)
 {
 	//遍历寄存器的相关变量链
-	for(map<int,list<OpInfo>>::iterator it=RegVal.begin();it!=RegVal.end();it++)
+	for(map<int,list<OpInfo> >::iterator it=RegVal.begin();it!=RegVal.end();it++)
 	{
 		for(list<OpInfo>::iterator it1=it->second.begin();it1!=it->second.end();it1++)
 		{
@@ -396,7 +395,7 @@ int CTarget::RegAlloc(int iSize,int iTarget)
 
 	int iReg=-1;
 
-	set<int> TmpSet;
+	set<int> TmpSet;//曾考察过的寄存器
 
 	static int AllocCursor[3]={0,0,0};
 
@@ -427,7 +426,7 @@ int CTarget::RegAlloc(int iSize,int iTarget)
 
 		if (Forbid.count(iTmpReg)==0
 		&& (RegVal.count(iTmpReg)==0
-		|| RegVal[iTmpReg].empty()))
+		|| RegVal[iTmpReg].empty()))//不可用 且未绑定
 		{
 			iReg=iTmpReg;
 			break;
@@ -469,7 +468,7 @@ int CTarget::RegAlloc(int iSize,int iTarget)
 		}
 	}
 
-	AllocCursor[j]=(iTmpCursor+1)%18;
+	AllocCursor[j]=(iTmpCursor+1)%8;//修改游标 是不是错了？
 
 	if (iReg==-1)
 	{
@@ -597,7 +596,7 @@ int CTarget::RegSpill(int iReg,OpInfo op)
 }
 void CTarget::RegRefSave()
 {
-	for(map<int,list<OpInfo>>::iterator it=RegVal.begin();it!=RegVal.end();it++)
+	for(map<int,list<OpInfo> >::iterator it=RegVal.begin();it!=RegVal.end();it++)
 	{
 		SaveReg(it->first);
 		it->second.clear();
@@ -605,7 +604,7 @@ void CTarget::RegRefSave()
 }
 void CTarget::RegClearAll()
 {
-	for(map<int,list<OpInfo>>::iterator it=RegVal.begin();it!=RegVal.end();it++)
+	for(map<int,list<OpInfo> >::iterator it=RegVal.begin();it!=RegVal.end();it++)
 	{
 		it->second.clear();
 	}
@@ -653,7 +652,7 @@ void CTarget::SetVal(int iReg,OpInfo op)
 		return;
 	}
 
-	for (map<int,list<OpInfo>>::iterator it=RegVal.begin();it!=RegVal.end();it++)
+	for (map<int,list<OpInfo> >::iterator it=RegVal.begin();it!=RegVal.end();it++)
 	{
 		for (list<OpInfo>::iterator it1=it->second.begin();it1!=it->second.end();)
 		{
@@ -671,7 +670,7 @@ void CTarget::SetVal(int iReg,OpInfo op)
 void CTarget::RegPrint()
 {
 	//输出寄存器分配情况
-	for(map<int,list<OpInfo>>::iterator it=RegVal.begin();it!=RegVal.end();it++)
+	for(map<int,list<OpInfo> >::iterator it=RegVal.begin();it!=RegVal.end();it++)
 	{
 		string szTmp=";";
 
@@ -805,7 +804,7 @@ bool CTarget::IRtoASM()
 				//根据IR，生成模式串，用于匹配相应的指令模式
 				string szPatternStr=GetOpStr(tmp->m_eOpType);
 
-				if (tmp->m_eOpType>>4<<4 == OpType::IN)
+				if (tmp->m_eOpType>>4<<4 == IN)
 				{
 					szPatternStr="IN";
 				}
@@ -1209,7 +1208,7 @@ bool CTarget::IRtoASM()
 		}
 		RecContentAsm(";process of end");
 
-		if (SymbolTbl.ProcInfoTbl.at(i).m_eType==ProcInfo::Type::Function)
+		if (SymbolTbl.ProcInfoTbl.at(i).m_eType==ProcInfo::Function)
 		{
 			int iRetSize=SymbolTbl.TypeInfoTbl[SymbolTbl.ProcInfoTbl.at(i).m_iReturnType].m_iSize;
 			ParaStr1.clear();
@@ -2095,12 +2094,12 @@ bool CTarget::GetLibAsm()
 
 vector<AsmCode>* CTarget::GetAsmCodeList(int iProcIndex)
 {
-	map<int,vector<AsmCode>>::iterator it=AsmCodeList.find(CurrProcId);
+	map<int,vector<AsmCode> >::iterator it=AsmCodeList.find(CurrProcId);
 
 	if (it==AsmCodeList.end())
 	{
 		vector<AsmCode> tmp;
-		AsmCodeList.insert(pair<int,vector<AsmCode>>(CurrProcId,tmp));
+		AsmCodeList.insert(pair<int,vector<AsmCode> >(CurrProcId,tmp));
 	}
 
 	it=AsmCodeList.find(CurrProcId);
@@ -2195,7 +2194,7 @@ void CTarget::WriteFile(string szFileName)
 {
 	extern void WriteProcAsm(vector<AsmCode> procAsm,ofstream &fout);
 	ofstream fout(szFileName.c_str());
-	map<int,vector<AsmCode>>::iterator it=AsmCodeList.find(-1);
+	map<int,vector<AsmCode> >::iterator it=AsmCodeList.find(-1);
 	WriteProcAsm(it->second,fout);
 	it=AsmCodeList.begin();
 	for(;it!=AsmCodeList.end();it++)

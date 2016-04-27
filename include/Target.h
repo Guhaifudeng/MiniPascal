@@ -5,8 +5,9 @@
 #include "Afx.h"
 #include "Structure.h"
 #include "SymbolTbl.h"
+#include "DataFlowAnalysis.h"
 using namespace std;
-
+extern map<int,vector<CBasicBlock> > BasicBlock;
 enum
 {
 	EAX=0,
@@ -71,7 +72,7 @@ static char RegRela[18][5]={
 		{-1,-1,-1,-1,-1}
 	};
 
-static map<int,list<OpInfo>> RegVal;
+static map<int,list<OpInfo> > RegVal;
 
 class CCodePattern
 {
@@ -133,7 +134,7 @@ public:
 	int GetProcParaSize(int iProcIndex);
 	bool GenRetAsm(IRCode Tmp);
 	bool GenPareAsm(IRCode Tmp);
-	void MemoryAlloc();
+	void MemoryAlloc();//¥Ê¥¢ø’º‰∑÷≈‰
 	string RegDivision(string szReg,int iFlg);
 	vector<AsmCode>* GetAsmCodeList(int iProcIndex);
 	string GetConstStr(string str);
@@ -157,5 +158,5 @@ public:
 	void SetVal(int iReg,OpInfo op);
 };
 
-extern CTarget target;
+
 #endif // CTARGET_H

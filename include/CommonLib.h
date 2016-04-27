@@ -48,7 +48,7 @@ string GetIRStr(IRCode tmp);
 int GetVarLink(string szTmp);
 
 /*****************´úÂëÉú³É***********************************/
-//string AsmtoStr(AsmCode p);
-//AsmCode InsertContent(string szContent);
-//void WriteProcAsm(vector<AsmCode> procAsm,ofstream &fout)
+string AsmtoStr(AsmCode p);
+AsmCode InsertContent(string szContent);
+void WriteProcAsm(vector<AsmCode> procAsm,ofstream &fout);
 #endif // COMMONLIB_H

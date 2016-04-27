@@ -737,7 +737,7 @@ int GetVarLink(string szTmp)//µÃµ½$+1 µ½Ä©Î²×Ö·û
 
 	return atoi(szTmp.substr(szTmp.find('$')+1,szTmp.length()).c_str());
 }
-/*
+
 string AsmtoStr(AsmCode p)
 {
 	string szTmp="";
@@ -765,4 +765,4 @@ AsmCode InsertContent(string szContent)
 	tmp.Content=szContent;
 	return tmp;
 }
-*/
+

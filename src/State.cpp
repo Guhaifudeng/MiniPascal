@@ -61,7 +61,7 @@ bool CState::CommandInit(int argc, char** argv)
 
 m_szSysDir=a+"sys\\";
 m_szErrFile=a+"err\\";
-m_szOutputFile=a+"out\\";
+m_szOutputFile=a+"out\\1.asm";
 /*m_szSysLib="syslib\\";
 m_szUserLib="userlib\\";
     if (-1 == access(m_szSysLib.c_str(),2))
