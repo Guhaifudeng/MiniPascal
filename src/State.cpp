@@ -1,10 +1,35 @@
 #include "State.h"
 #include "Afx.h"
+#include <string.h>
+void replace_all(string& str,char* oldValue,char* newValue)
+{
+    string::size_type pos(0);
 
+    while(true){
+        pos=str.find(oldValue,pos);
+        if (pos!=(string::npos))
+        {
+            str.replace(pos,strlen(oldValue),newValue);
+            pos+=2;//注意是加2，为了跳到下一个反斜杠
+        }
+        else
+            break;
+    }
+}
 bool CState::CommandInit(int argc, char** argv)
 {
     char* cmd;
-m_szSourceFile = "test\\1.mlp";
+    /*char buf[1000];
+    int i=1000;
+    GetCurrentDirectory(1000,buf);  //得到当前工作路径*/
+    char buf[80];
+    getcwd(buf, sizeof(buf));
+    string a;
+    a.assign(buf);
+    replace_all(a,"\\","\\\\");
+    a.append("\\\\");
+    cout<<a<<endl;
+    m_szSourceFile = a+"test\\1.mlp";
     for (int i = 0 ; i < argc ; i ++)
     {
         cmd = argv[i];
@@ -12,9 +37,17 @@ m_szSourceFile = "test\\1.mlp";
         if (cmd[0] == '/'
                 || cmd[0] == '-')
         {
-            if (cmd[1] == 's')
+            if(cmd[1]=='d'){//设置绝对路径
+                char *p;
+                p = &cmd[2];
+                a.assign(p);
+                replace_all(a,"\\","\\\\");
+                a.append("\\\\");
+                cout<<a<<endl;
+            }else if (cmd[1] == 's')
             {
                 m_szSourceFile = &cmd[2];
+                m_szSourceFile=a+"\\test\\"+m_szSourceFile;
             }
 
             else if (cmd[1] == 'o'
@@ -26,9 +59,9 @@ m_szSourceFile = "test\\1.mlp";
         }
     }
 
-m_szSysDir="sys\\";
-m_szErrFile="err\\";
-m_szOutputFile="out\\";
+m_szSysDir=a+"sys\\";
+m_szErrFile=a+"err\\";
+m_szOutputFile=a+"out\\";
 /*m_szSysLib="syslib\\";
 m_szUserLib="userlib\\";
     if (-1 == access(m_szSysLib.c_str(),2))

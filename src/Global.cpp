@@ -40,3 +40,6 @@ vector<CBasicBlock>* CurrentBasicBlock;
 COptimization Optimization;
 int iOptiLevel;
 bool bOptiChanged;
+/********************´úÂëÉú³É*****************************/
+//map<int,vector<AsmCode>> AsmCodeList;
+//CPeep_Hole PeepHole;

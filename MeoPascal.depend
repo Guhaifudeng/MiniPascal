@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461677654 source:d:\codeblock\meopascal\main.cpp
+1461745272 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -8,6 +8,7 @@
 	"Lex.h"
 	"Global.h"
 	"SymbolTbl.h"
+	"Optimization.h"
 
 1460941170 d:\codeblock\meopascal\include\stdafx.h
 	"math.h"
@@ -25,7 +26,7 @@
 	<list>
 	<fstream>
 
-1461723765 d:\codeblock\meopascal\include\structure.h
+1461737871 d:\codeblock\meopascal\include\structure.h
 	"Afx.h"
 	"Bits.h"
 
@@ -39,9 +40,10 @@
 	"Structure.h"
 	"SymbolTbl.h"
 
-1460941170 d:\codeblock\meopascal\include\state.h
+1461743257 d:\codeblock\meopascal\include\state.h
 	"Afx.h"
 	"ErrorProc.h"
+	<unistd.h>
 
 1461580192 d:\codeblock\meopascal\include\lex.h
 	"Afx.h"
@@ -69,7 +71,7 @@
 	"Afx.h"
 	"ErrorProc.h"
 
-1461728340 source:d:\codeblock\meopascal\src\global.cpp
+1461740218 source:d:\codeblock\meopascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 	"Opti_Tbl.h"
@@ -107,9 +109,10 @@
 
 1460901681 d:\codeblock\meopascal\include\ssttt.h
 
-1461672422 source:d:\codeblock\meopascal\src\state.cpp
+1461745381 source:d:\codeblock\meopascal\src\state.cpp
 	"State.h"
 	"Afx.h"
+	<string.h>
 
 1460901305 source:d:\codeblock\meopascal\src\stdafx.cpp
 	"Afx.h"
@@ -326,7 +329,7 @@
 	"SymbolTbl.h"
 	"Optimization.h"
 
-1461728693 d:\codeblock\meopascal\include\optimization.h
+1461741581 d:\codeblock\meopascal\include\optimization.h
 	"Afx.h"
 	"SymbolTbl.h"
 	"Structure.h"
@@ -334,8 +337,10 @@
 	"Const_Prop.h"
 	"Const_Fold.h"
 	"Copy_Prop.h"
+	"IRSimplify.h"
+	"DeadCodeElimination.h"
 
-1461714910 d:\codeblock\meopascal\include\opti_tbl.h
+1461738057 d:\codeblock\meopascal\include\opti_tbl.h
 
 1461728885 source:d:\codeblock\meopascal\src\const_fold.cpp
 	"Const_Fold.h"
@@ -359,7 +364,30 @@
 1461728535 source:d:\codeblock\meopascal\src\const_prop.cpp
 	"Const_Prop.h"
 
-1461728380 source:d:\codeblock\meopascal\src\optimization.cpp
+1461745279 source:d:\codeblock\meopascal\src\optimization.cpp
 	"Optimization.h"
 	"Optimization.h"
+
+1461729466 source:d:\codeblock\meopascal\src\copy_prop.cpp
+	"Copy_Prop.h"
+
+1461740408 source:d:\codeblock\meopascal\src\irsimplify.cpp
+	"IRSimplify.h"
+
+1461740445 d:\codeblock\meopascal\include\irsimplify.h
+	"Structure.h"
+	"Afx.h"
+	"SymbolTbl.h"
+
+1461741228 source:d:\codeblock\meopascal\src\deadcodeelimination.cpp
+	"DeadCodeElimination.h"
+
+1461741322 d:\codeblock\meopascal\include\deadcodeelimination.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"DataFlowAnalysis.h"
+
+1461742179 source:d:\codeblock\meopascal\untitled1.cpp
+	<iostream>
 

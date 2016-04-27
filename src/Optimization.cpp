@@ -34,7 +34,7 @@ void COptimization::OptiPass()
 	{
 		OptiMap.insert(pair<OpType,Opti_Tbl*>(opti_tbl[i].Op,&opti_tbl[i]));
 	}
-
+    /*
 	while (bOptiChanged)
 	{
 		bOptiChanged=false;
@@ -57,7 +57,7 @@ void COptimization::OptiPass()
 
 		SymbolTbl.PrintIR();
 
-		/*CConst_Fold::Func_Const_Fold();
+		CConst_Fold::Func_Const_Fold();
 
 		cout<<"\n[常量折叠后IR]："<<endl;
 
@@ -69,7 +69,7 @@ void COptimization::OptiPass()
 
 		SymbolTbl.PrintIR();
 
-		/*CIRSimplify::Func_IRSimplify();
+		CIRSimplify::Func_IRSimplify();
 
 		cout<<"\n[代数简化后IR]："<<endl;
 
@@ -88,13 +88,13 @@ void COptimization::OptiPass()
 		SymbolTbl.PrintIR();
 
 
-		*/
+
 		i++;
 	}
-    /*
+    */
 	CDataFlowAnalysis::DataFlowAnalysis();
 
-	CMemShare::TmpMemShare();
-	*/
+    //	CMemShare::TmpMemShare();
+
 }
 

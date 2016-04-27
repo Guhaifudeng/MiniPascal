@@ -166,7 +166,7 @@ struct OpInfo//操作数
 	bool m_bRef;												//操作数是否为间接寻址
 	vector<int> m_udChain;
 	vector<int> m_duChain;
-	bool m_bUninit;
+	bool m_bUninit;//是否初始化
 	OpInfo();
 };
 
@@ -566,13 +566,13 @@ struct Opti_Tbl
 		Exp1,Exp1_2,Exp1_3,Exp1_2_3,nExp1,nExp1_2,nExp1_3,nExp1_2_3,//
 		ToInt,ToReal,ToSingle,ToSmall,ToWord,ToLong,ToShort,ToByte,ToLong8,ToAssign,
 		DeadCode,Commutative};
-	int eJmpType;
-	int eExpType;
-	int eConstPropType;
-	int eOpToken;
-	int eDeadCode;
-	int eAlgebraicProcess;
-	int eCommutative;
+	int eJmpType;//跳转类型
+	int eExpType;//表达式类型
+	int eConstPropType;//常量传播类型
+	int eOpToken;//单词类型
+	int eDeadCode;//死代码操作类型
+	int eAlgebraicProcess;//代数简化类型
+	int eCommutative;//是否满足交换律
 };
 
 

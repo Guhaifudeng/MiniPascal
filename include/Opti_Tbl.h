@@ -1,4 +1,4 @@
-	//IR操作码				跳转类型				操作数个数
+	//IR操作码				跳转类型				操作数个数    常量传播类型          单词类型             死代码操作类型         代数化简类型            是否满足交换律
 	{JMP,			Opti_Tbl::NonCondJmp	,Opti_Tbl::None,	Opti_Tbl::None,			Opti_Tbl::None,		Opti_Tbl::None,			Opti_Tbl::None,			Opti_Tbl::None},
 	{JT,			Opti_Tbl::CondJmp		,Opti_Tbl::nExp1,	Opti_Tbl::None,			Opti_Tbl::None,		Opti_Tbl::None,			Opti_Tbl::None,			Opti_Tbl::None},
 	{JNT,			Opti_Tbl::CondJmp		,Opti_Tbl::nExp1,	Opti_Tbl::None,			Opti_Tbl::None,		Opti_Tbl::None,			Opti_Tbl::None,			Opti_Tbl::None},

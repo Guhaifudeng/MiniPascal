@@ -7,6 +7,7 @@
 #include "Lex.h"
 #include "Global.h"
 #include "SymbolTbl.h"
+#include "Optimization.h"
 using namespace std;
 void Init()
 {
@@ -53,6 +54,13 @@ int main(int argc, char** argv)
     //输出IR
 	SymbolTbl.PrintIR();
 
+
+	//IR优化
+	if (!State.m_bOpti)
+	{
+		COptimization::OptiPass();
+	}
+
 }
 
 /*
@@ -82,11 +90,6 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
-	//IR优化
-	if (State.m_bOpti)
-	{
-		COptimization::OptiPass();
-	}
 
 	//运行时刻环境
 	CMemoryAlloc::MemoryAlloc();

@@ -2,6 +2,7 @@
 #define CSTATE_H
 #include "Afx.h"
 #include "ErrorProc.h"
+#include <unistd.h>
 using namespace std;
 class CState
 {
