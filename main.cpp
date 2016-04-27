@@ -8,6 +8,7 @@
 #include "Global.h"
 #include "SymbolTbl.h"
 #include "Optimization.h"
+#include "MemoryAlloc.h"
 using namespace std;
 void Init()
 {
@@ -60,6 +61,8 @@ int main(int argc, char** argv)
 	{
 		COptimization::OptiPass();
 	}
+	//运行时刻环境
+	CMemoryAlloc::MemoryAlloc();
 
 }
 
@@ -91,8 +94,7 @@ int main(int argc, char** argv)
 	}
 
 
-	//运行时刻环境
-	CMemoryAlloc::MemoryAlloc();
+
 
 	//目标代码生成
 	target.IRtoASM();

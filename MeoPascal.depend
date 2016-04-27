@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461745272 source:d:\codeblock\meopascal\main.cpp
+1461752136 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -9,6 +9,7 @@
 	"Global.h"
 	"SymbolTbl.h"
 	"Optimization.h"
+	"MemoryAlloc.h"
 
 1460941170 d:\codeblock\meopascal\include\stdafx.h
 	"math.h"
@@ -117,7 +118,7 @@
 1460901305 source:d:\codeblock\meopascal\src\stdafx.cpp
 	"Afx.h"
 
-1461746647 source:d:\codeblock\meopascal\src\structure.cpp
+1461747919 source:d:\codeblock\meopascal\src\structure.cpp
 	"Structure.h"
 	"Afx.h"
 
@@ -399,4 +400,13 @@
 
 1461747693 source:d:\codeblock\meopascal\src\memshare.cpp
 	"MemShare.h"
+
+1461752178 d:\codeblock\meopascal\include\memoryalloc.h
+	"Afx.h"
+	"SymbolTbl.h"
+	"CommonLib.h"
+	"Structure.h"
+
+1461752278 source:d:\codeblock\meopascal\src\memoryalloc.cpp
+	"MemoryAlloc.h"
 
