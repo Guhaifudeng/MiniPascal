@@ -1,6 +1,10 @@
 Program DatenTimeDemo(input,output);
+const
+	a = 's';
 var i,j:integer;
+	len:string;
 begin
 	i:=0;
 	i:=i+j;
+	len:='0112';
 end.

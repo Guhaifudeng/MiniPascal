@@ -7,7 +7,6 @@
 #include "Syntax.h"
 #include "Semantic.h"
 #include "Optimization.h"
-#include "Peep_Hole.h"
 #include "Target.h"
 using namespace std;
 extern vector<ErrorInfo> ErrorProcess;         //¥ÌŒÛ–≈œ¢±Ì

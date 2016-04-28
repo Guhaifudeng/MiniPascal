@@ -4,11 +4,14 @@ option casemap: none
 include PasLib.INC 
 .data  
   ;ConstSymbolList:
-__Const0=0  
+__Const1=0  
+__Text2 db "0112",0  
+__Const2 dword 0  
   ;VarSymbolList
 __cvt DWORD 1 DUP(0)  
 _DATENTIMEDEMO$I DWORD 1 DUP(0)  
 _DATENTIMEDEMO$J DWORD 1 DUP(0)  
+_DATENTIMEDEMO$LEN DWORD 1 DUP(0)  
 _DATENTIMEDEMO$_T0 DWORD 1 DUP(0)  
 _DATENTIMEDEMO$_T1=_DATENTIMEDEMO$_T0  
 .code  
@@ -23,7 +26,7 @@ push ebx
 push esi 
 push edi 
   ;(ByteToInt     ,0,null,_T0)
-mov al,byte ptr [__Const0] 
+mov al,byte ptr [__Const1] 
 mov dword ptr ebx,0 
 mov bl,byte ptr al 
   ;ebx:_T0,
@@ -42,6 +45,7 @@ mov [_DATENTIMEDEMO$_T1],dword ptr edx
 mov edi,dword ptr [_DATENTIMEDEMO$_T1] 
   ;edi:_T1,I,
 mov [_DATENTIMEDEMO$I],dword ptr edi 
+  ;(ASSIGN_S      ,'0112',null,LEN)
   ;process of end
 pop edi 
 pop esi 

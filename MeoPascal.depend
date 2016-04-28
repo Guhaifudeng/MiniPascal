@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461752827 source:d:\codeblock\meopascal\main.cpp
+1461814162 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -36,7 +36,7 @@
 	"Structure.h"
 	"State.h"
 
-1461545229 d:\codeblock\meopascal\include\commonlib.h
+1461814162 d:\codeblock\meopascal\include\commonlib.h
 	"Afx.h"
 	"Structure.h"
 	"SymbolTbl.h"
@@ -55,7 +55,7 @@
 	"CType.h"
 	"SymbolTbl.h"
 
-1461728406 d:\codeblock\meopascal\include\global.h
+1461814653 d:\codeblock\meopascal\include\global.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
@@ -63,8 +63,9 @@
 	"Syntax.h"
 	"Semantic.h"
 	"Optimization.h"
+	"Target.h"
 
-1461545229 source:d:\codeblock\meopascal\src\commonlib.cpp
+1461814162 source:d:\codeblock\meopascal\src\commonlib.cpp
 	"CommonLib.h"
 	"Afx.h"
 
@@ -72,7 +73,7 @@
 	"Afx.h"
 	"ErrorProc.h"
 
-1461740218 source:d:\codeblock\meopascal\src\global.cpp
+1461814162 source:d:\codeblock\meopascal\src\global.cpp
 	"Global.h"
 	"Afx.h"
 	"Opti_Tbl.h"
@@ -110,7 +111,7 @@
 
 1460901681 d:\codeblock\meopascal\include\ssttt.h
 
-1461745381 source:d:\codeblock\meopascal\src\state.cpp
+1461814162 source:d:\codeblock\meopascal\src\state.cpp
 	"State.h"
 	"Afx.h"
 	<string.h>
@@ -249,7 +250,7 @@
 	"State.h"
 	<iostream>
 
-1461673693 source:d:\codeblock\meopascal\src\symboltbl.cpp
+1461757533 source:d:\codeblock\meopascal\src\symboltbl.cpp
 	"SymbolTbl.h"
 
 1461771976 h:\codeblock\compiler\minipascal\include\syntax.h
@@ -519,5 +520,14 @@
 	"DataFlowAnalysis.h"
 
 1461772874 source:h:\codeblock\compiler\minipascal\src\target.cpp
+	"Target.h"
+
+1461814162 d:\codeblock\meopascal\include\target.h
+	"Afx.h"
+	"Structure.h"
+	"SymbolTbl.h"
+	"DataFlowAnalysis.h"
+
+1461814162 source:d:\codeblock\meopascal\src\target.cpp
 	"Target.h"
 
