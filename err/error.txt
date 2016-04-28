@@ -1,0 +1,1 @@
+[Error]H:\\Codeblock\\compiler\\MiniPascal\\test\1.mlp(14):标识符未声明或非法引用

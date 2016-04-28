@@ -1983,3 +1983,160 @@ mov dword ptr 4 %V.3%,edx
 }
 
 
+{
+EQU_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+or  eax,eax
+jnz %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+
+{
+NEQU_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+or  eax,eax
+jz %L.-1%
+mov eax,1
+%L.-1%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+LS_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+cmp  eax,0
+jnl %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+MR_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+cmp  eax,0
+jng %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+LE_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+cmp  eax,0
+jg  %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+MR_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+cmp  eax,0
+jl  %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+ME_S %V.1% %V.2% %V.3%
+1
+/loadS
+mov eax,dword ptr[%V.1%]
+mov edx,dword ptr[%V.2%]
+call _StrCmp@0
+cmp  eax,0
+jle  %L.-1%
+mov eax,1
+jmp %L.-2%
+%L.-1%:
+mov eax,0
+%L.-2%:
+/saveS
+mov dword ptr[%V.3%],eax
+}
+
+{
+STR_INIT %V.1%
+1
+mov eax,1
+call _GetMem@0
+mov dword ptr[%V.1%],eax
+}
+
+{
+CONSTSTR_INIT %V.1% %V.2% %V.3%
+1
+mov eax,%V.2%
+call _GetMem@0
+mov dword ptr[%V.3%],eax
+mov edx,dword ptr[%V.3%]
+mov eax,offset[%V.1%]
+call _StrCopy@0
+}
+
+{
+CONSTSTR_DESTORY %V.3%
+1
+mov eax,dword ptr[%V.3%]
+call _FreeMem@0
+}
+
+{
+STR_DESTORY %V.1%
+1
+mov eax,dword ptr[%V.1%]
+call _FreeMem@0
+}
+

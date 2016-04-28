@@ -51,7 +51,6 @@
 		<Unit filename="include/MemoryAlloc.h" />
 		<Unit filename="include/Opti_Tbl.h" />
 		<Unit filename="include/Optimization.h" />
-		<Unit filename="include/Peep_Hole.h" />
 		<Unit filename="include/Semantic.h" />
 		<Unit filename="include/State.h" />
 		<Unit filename="include/Structure.h" />
@@ -75,7 +74,6 @@
 		<Unit filename="src/MemShare.cpp" />
 		<Unit filename="src/MemoryAlloc.cpp" />
 		<Unit filename="src/Optimization.cpp" />
-		<Unit filename="src/Peep_Hole.cpp" />
 		<Unit filename="src/Semantic.cpp" />
 		<Unit filename="src/State.cpp" />
 		<Unit filename="src/Structure.cpp" />
@@ -90,7 +88,7 @@
 			<lib_finder disable_auto="1" />
 			<AutoVersioning>
 				<Scheme minor_max="10" build_max="0" rev_max="0" rev_rand_max="10" build_times_to_increment_minor="100" />
-				<Settings autoincrement="1" date_declarations="1" use_define="0" update_manifest="0" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
+				<Settings autoincrement="1" date_declarations="1" update_manifest="0" do_auto_increment="0" ask_to_increment="0" language="C++" svn="0" svn_directory="" header_path="version.h" />
 				<Changes_Log show_changes_editor="0" app_title="released version %M.%m.%b of %p" changeslog_path="ChangesLog.txt" />
 				<Code header_guard="VERSION_H" namespace="AutoVersion" prefix="" />
 			</AutoVersioning>

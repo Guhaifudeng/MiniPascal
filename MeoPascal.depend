@@ -169,7 +169,7 @@
 	"CType.h"
 	"SymbolTbl.h"
 
-1461772831 h:\codeblock\compiler\minipascal\include\global.h
+1461818501 h:\codeblock\compiler\minipascal\include\global.h
 	"Afx.h"
 	"Structure.h"
 	"State.h"
@@ -177,7 +177,6 @@
 	"Syntax.h"
 	"Semantic.h"
 	"Optimization.h"
-	"Peep_Hole.h"
 	"Target.h"
 
 1461771450 source:h:\codeblock\compiler\minipascal\src\commonlib.cpp
@@ -197,7 +196,7 @@
 	"Lex.h"
 	"Afx.h"
 
-1461772080 source:h:\codeblock\compiler\minipascal\main.cpp
+1461818487 source:h:\codeblock\compiler\minipascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
