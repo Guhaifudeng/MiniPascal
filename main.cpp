@@ -57,10 +57,10 @@ int main(int argc, char** argv)
 
 
 	//IR优化
-	if (!State.m_bOpti)
+	/*if (!State.m_bOpti)
 	{
 		COptimization::OptiPass();
-	}
+	}*/
 	//运行时刻环境
 	CMemoryAlloc::MemoryAlloc();
 	//目标代码生成

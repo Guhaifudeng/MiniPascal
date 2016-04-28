@@ -51,7 +51,6 @@
 		<Unit filename="include/MemoryAlloc.h" />
 		<Unit filename="include/Opti_Tbl.h" />
 		<Unit filename="include/Optimization.h" />
-		<Unit filename="include/Peep_Hole.h" />
 		<Unit filename="include/Semantic.h" />
 		<Unit filename="include/State.h" />
 		<Unit filename="include/Structure.h" />
@@ -75,7 +74,6 @@
 		<Unit filename="src/MemShare.cpp" />
 		<Unit filename="src/MemoryAlloc.cpp" />
 		<Unit filename="src/Optimization.cpp" />
-		<Unit filename="src/Peep_Hole.cpp" />
 		<Unit filename="src/Semantic.cpp" />
 		<Unit filename="src/State.cpp" />
 		<Unit filename="src/Structure.cpp" />

@@ -1,5 +1,6 @@
 Program DatenTimeDemo(input,output);
 const
+<<<<<<< HEAD
 	a = 's';
 var i,j:integer;
 	len:string;
@@ -7,4 +8,19 @@ begin
 	i:=0;
 	i:=i+j;
 	len:='0112';
+=======
+	message = 'Welcome';
+var i,j:integer;
+	//subname:string;
+	name:array[1..10] of integer;
+	hot:string;
+	less:string;
+begin
+	i:=0;
+	i:=i+j;
+	name[3] := 1;
+	hot := 'message';
+	less := hot;
+	//subname:='test';
+>>>>>>> 33b335b0e3234ad614472b72629baa9724026eae
 end.
