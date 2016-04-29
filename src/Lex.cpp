@@ -93,6 +93,7 @@ bool CLex::Process(int iTag)
 
 void CLex::EmitToken(int iKind,string sContent,int iRow)
 {
+    cout<<iKind<<":"<<sContent<<endl;
     m_pTokenList->push_back(CToken(iKind,sContent,iRow,m_szFileName));
 }
 

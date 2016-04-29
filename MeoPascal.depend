@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1461814162 source:d:\codeblock\meopascal\main.cpp
+1461843049 source:d:\codeblock\meopascal\main.cpp
 	"StdAfx.h"
 	"Structure.h"
 	"ErrorProc.h"
@@ -78,7 +78,7 @@
 	"Afx.h"
 	"Opti_Tbl.h"
 
-1461579640 source:d:\codeblock\meopascal\src\lex.cpp
+1461931204 source:d:\codeblock\meopascal\src\lex.cpp
 	"Lex.h"
 	"Afx.h"
 
